@@ -358,6 +358,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 202d0421fb70db842a14d19a18f547d3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5b1a5af4f3fe213449dba2cd1a2de13c, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 202d0421fb70db842a14d19a18f547d3, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5b1a5af4f3fe213449dba2cd1a2de13c, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 202d0421fb70db842a14d19a18f547d3, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5b1a5af4f3fe213449dba2cd1a2de13c, type: 2}
     - target: {fileID: 919132149155446097, guid: 202d0421fb70db842a14d19a18f547d3, type: 3}
       propertyPath: m_Name
       value: KitchenKnife
@@ -815,6 +827,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 57b73aa49b0061544afce8072bedd1b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: -6518380632535569532, guid: d51e6ba1fdc25b741b89ee1ca683edd0, type: 3}
     - target: {fileID: 919132149155446097, guid: 57b73aa49b0061544afce8072bedd1b1, type: 3}
       propertyPath: m_Name
       value: plate (1)
@@ -935,6 +951,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 721b180b296987645ba2727ca818594b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5b1a5af4f3fe213449dba2cd1a2de13c, type: 2}
     - target: {fileID: 919132149155446097, guid: 721b180b296987645ba2727ca818594b, type: 3}
       propertyPath: m_Name
       value: Fork
@@ -1478,8 +1498,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8d599e4346a731a4b9b3e27a818c7047, type: 2}
-  - {fileID: 2100000, guid: 43672be0899539340ba6ac5db322693c, type: 2}
+  - {fileID: 0}
+  - {fileID: 2100000, guid: 5eea27bae1807dd4486564f1bac3964f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1518,8 +1538,8 @@ Transform:
   m_GameObject: {fileID: 2102629066}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.02, z: -0.014}
-  m_LocalScale: {x: 25, y: 1, z: 25}
+  m_LocalPosition: {x: 0, y: -0.07, z: -0.014}
+  m_LocalScale: {x: 0.6294249, y: 1, z: 0.43087637}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1783572214}
@@ -1735,7 +1755,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.43129, y: 1, z: -0.156}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1565887663878291441}
@@ -1810,7 +1830,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 482037686947332329, guid: 7c4bed9420ca42043b17e160d269d281, type: 3}
+  - {fileID: 2100000, guid: 5b1a5af4f3fe213449dba2cd1a2de13c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1869,7 +1889,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 482037686947332329, guid: 7c4bed9420ca42043b17e160d269d281, type: 3}
+  - {fileID: 2100000, guid: 5b1a5af4f3fe213449dba2cd1a2de13c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
