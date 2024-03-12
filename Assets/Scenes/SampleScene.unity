@@ -306,6 +306,10 @@ PrefabInstance:
       value: Room_Modern_Ceiling
       objectReference: {fileID: 0}
     - target: {fileID: 6102216339859042422, guid: 3d89d97e6a6df4826875d39af54c1172, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102216339859042422, guid: 3d89d97e6a6df4826875d39af54c1172, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: b93a18add86445d49bb4befb6381a9ea, type: 2}
