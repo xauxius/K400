@@ -19,6 +19,7 @@ public class ForkStabEating : Grabbing
                 FixedJoint joint = gameObject.AddComponent<FixedJoint>();
                 joint.connectedBody = collision.rigidbody;
                 joints.Push(joint);
+                return;
             }
         }
     }

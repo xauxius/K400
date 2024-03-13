@@ -4,6 +4,7 @@ using UnityEngine;
 public class Eatable : MonoBehaviour
 {
     public List<Mesh> meshes;
+    public Mesh last;
     
     private MeshFilter meshFilter;
     private int meshIndex = -1;
@@ -15,9 +16,11 @@ public class Eatable : MonoBehaviour
 
     public void Eat()
     {
-        if (++meshIndex < meshes.Count)
-        {
+        if (++meshIndex < meshes.Count) {
             meshFilter.mesh = meshes[meshIndex];
+        } else if (last is not null) {
+            meshFilter.mesh = last;
+            enabled = false;
         } else {
             Destroy(gameObject);
         }
