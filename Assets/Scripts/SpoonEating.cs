@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class SpoonEating : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collision)
+
+	[SerializeField] private AudioClip valgymogarsas;
+	void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Spoonable"))
         {
@@ -10,8 +12,12 @@ public class SpoonEating : MonoBehaviour
 
             if (eatable is not null)
             {
-                eatable.Eat();
-            }
+
+				SoundManager.instance.playEfektus(valgymogarsas, transform);
+				eatable.Eat();
+
+			
+			}
         }
     }
 }

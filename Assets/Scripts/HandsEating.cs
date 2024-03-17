@@ -1,10 +1,13 @@
+using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class HandsEating : Grabbing
 {
     private Eatable food;
 
-    void Start()
+	[SerializeField] private AudioClip valgymogarsas;
+
+	void Start()
     {
         food = GetComponent<Eatable>();
     }    
@@ -12,5 +15,6 @@ public class HandsEating : Grabbing
     public override void HandleActivate(ActivateEventArgs args)
     {
         food.Eat();
-    }
+		SoundManager.instance.playEfektus(valgymogarsas, transform);
+	}
 }

@@ -4,6 +4,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class ForkStabEating : Grabbing
 {
+    [SerializeField] private AudioClip valgymogarsas;
     public float stabTreshold = 0.1f;
 
     private Stack<FixedJoint> joints = new Stack<FixedJoint>();
@@ -33,6 +34,7 @@ public class ForkStabEating : Grabbing
             if (food is not null)
             {
                 food.Eat();
+                SoundManager.instance.playEfektus(valgymogarsas, transform);
             }
         }
     }
