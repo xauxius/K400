@@ -1096,7 +1096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropdown: {fileID: 665487168}
-  audios: {fileID: 0}
+  audios: {fileID: 64859629}
   clip1: {fileID: 8300000, guid: b98defb4068833c49ba047aaa8e5b290, type: 3}
   clip2: {fileID: 8300000, guid: 5adcc612ca0f32048a5a2ca835d5a8e3, type: 3}
   clip3: {fileID: 8300000, guid: b0692efaada3c2045937b2271d67cbb2, type: 3}
