@@ -2049,6 +2049,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshes: []
   last: {fileID: 0}
+--- !u!1 &1143920168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1143920170}
+  - component: {fileID: 1143920169}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1143920169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143920168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a32c03dc4302144bea4f918a359b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AudioSource: {fileID: 2747077212167198479, guid: 3bea14542975a004baf98331d69756e5, type: 3}
+--- !u!4 &1143920170
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143920168}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.1344032, y: 0.56648123, z: -0.061777055}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1418630062 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7953412268386571623, guid: e68a4a90d20df214488179abb1ba965d, type: 3}
@@ -2550,7 +2595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f0f96bb46e86f4419200779b4c44b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valgymogarsas: {fileID: 0}
+  valgymogarsas: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
   stabTreshold: 0.1
 --- !u!1 &1518444465
 GameObject:
@@ -3339,7 +3384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 867f93dca40fa83428287538225691d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valgymogarsas: {fileID: 0}
+  valgymogarsas: {fileID: 8300000, guid: 229f8d171e2f5e54b97565e0ea793436, type: 3}
 --- !u!23 &1839004304
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4331,7 +4376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99d523acd78ff974a90b032ad0127afe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valgymogarsas: {fileID: 0}
+  valgymogarsas: {fileID: 8300000, guid: d641a278debcfab4abead8e30f2238f2, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -4341,3 +4386,4 @@ SceneRoots:
   - {fileID: 1518444466}
   - {fileID: 219727969}
   - {fileID: 370651068}
+  - {fileID: 1143920170}
