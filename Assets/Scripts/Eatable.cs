@@ -3,23 +3,25 @@ using UnityEngine;
 
 public class Eatable : MonoBehaviour
 {
+    // Managing mesh
     public List<Mesh> meshes;
-    public Mouth mouth;
-
     public Mesh last;
-    
     private MeshFilter meshFilter;
-    private Vector3 startPosition;
-    private int meshIndex = -1;
+    private int meshIndex = 0;
+
+    // Eating
+    public Mouth mouth;
     private bool eating = false;
+
+    // Starting transform
+    private Vector3 startPosition;
+    private Quaternion startRotation;
 
     void Start()
     {
-        startPosition = transform.position;
-    }
+        startPosition = transform.position.Copy();
+        startRotation = transform.rotation.Copy();
 
-    void Awake()
-    {
         meshFilter = GetComponent<MeshFilter>();
     }
 
@@ -27,11 +29,13 @@ public class Eatable : MonoBehaviour
     {
         var distance = Vector3.Distance(mouth.transform.position, transform.position);
 
-        if (distance <= mouth.radius && !eating)
+        if (distance <= mouth.radius)
         {
-            Debug.Log($"eating: {eating}");
-            Eat();
-            eating = true;
+            if (!eating)
+            {
+                Eat();
+                eating = true;
+            }
         } else {
             eating = false;
         }
@@ -46,14 +50,15 @@ public class Eatable : MonoBehaviour
             enabled = false;
         } else {
             ResetFood();
-            // Destroy(gameObject);
         }
     }
 
     void ResetFood()
     {
-        meshFilter.mesh = meshes[0];
         meshIndex = 0;
-        transform.position = startPosition;
+        meshFilter.mesh = meshes[0];
+
+        Instantiate(gameObject, startPosition, startRotation);
+        Destroy(gameObject);
     } 
 }
