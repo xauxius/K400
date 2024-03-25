@@ -30,7 +30,7 @@ public class ForkStabEating : Grabbing
 
     void OnCollisionEnter(Collision collision)
     {
-        if (!collision.gameObject.CompareTag("Forkable"))
+        if (!collision.gameObject.CompareTag("Food"))
             return;
 
         foreach (ContactPoint contact in collision.contacts)
