@@ -101,7 +101,9 @@ public class TestingFork : Grabbing
 
     void LimitAxis()
     {
+        Debug.Log(food.transform.position);
         joint.xMotion = ConfigurableJointMotion.Locked;
+        Debug.Log(food.transform.position);
     }
 
     void FreeAxis()

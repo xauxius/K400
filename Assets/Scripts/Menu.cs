@@ -7,7 +7,7 @@ public class Menu : MonoBehaviour
 {
     public void Pradeti()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Kambarys");
     }
 	public void Iseiti()
 	{

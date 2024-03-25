@@ -5,9 +5,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class ForkStabEating : Grabbing
 {
+    [SerializeField] private AudioClip valgymogarsas;
     public float stabTreshold = 0.1f;
 
-    private Stack<FixedJoint> joints = new Stack<FixedJoint>();
+    private GameObject forked;
+    private FixedJoint joint;
+    private Vector3 lastPosition;
     private Collider ForkCollider;
 
     void Start()
@@ -15,11 +18,20 @@ public class ForkStabEating : Grabbing
         ForkCollider = gameObject.GetComponent<Collider>();
     }
 
+    void Update()
+    {
+        if (forked != null && joint == null && ForkIsGoingBack())
+        {
+            StickToFork();
+        }
+        lastPosition = transform.position.Copy();
+    }
+
     // Stabbing
 
     void OnCollisionEnter(Collision collision)
     {
-        if (!collision.gameObject.CompareTag("Forkable") || BodyIsAllreadyOnFork(collision.rigidbody))
+        if (!collision.gameObject.CompareTag("Forkable"))
             return;
 
         foreach (ContactPoint contact in collision.contacts)
@@ -28,8 +40,7 @@ public class ForkStabEating : Grabbing
             
             if (1 + localContactNormal.x <= stabTreshold)
             {
-                AddBodyToJoint(collision.rigidbody);
-
+                forked = collision.gameObject;
                 DisableForkAndForkedColliders(collision.gameObject);
 
                 return;
@@ -37,17 +48,18 @@ public class ForkStabEating : Grabbing
         }
     }
 
-    bool BodyIsAllreadyOnFork(Rigidbody body)
+    bool ForkIsGoingBack()
     {
-        var found = joints.FirstOrDefault(j => j.connectedBody.Equals(body));
-        return found != null;
+        Vector3 direction = Vector3.Normalize(transform.position - lastPosition);
+        Vector3 back = -transform.right;
+
+        return Vector3.Dot(direction, back) > 0.7;
     }
 
-    void AddBodyToJoint(Rigidbody body)
+    void StickToFork()
     {
-        FixedJoint joint = gameObject.AddComponent<FixedJoint>();
-        joint.connectedBody = body;
-        joints.Push(joint);
+        joint = gameObject.AddComponent<FixedJoint>();
+        joint.connectedBody = forked.gameObject.GetComponent<Rigidbody>();
     }
 
     void DisableForkAndForkedColliders(GameObject forked)
@@ -64,15 +76,14 @@ public class ForkStabEating : Grabbing
 
     public override void HandleActivate(ActivateEventArgs args)
     {
-        if (joints.Count > 0)
+        Eatable food = joint.connectedBody.gameObject.GetComponent<Eatable>();
+        Destroy(joint);
+        if (food is not null)
         {
-            FixedJoint joint = joints.Pop();
-            Eatable food = joint.connectedBody.gameObject.GetComponent<Eatable>();
-            if (food is not null)
-            {
-                food.Eat();
-            }
-            Destroy(joint);
+            food.Eat();
+            SoundManager.instance.playEfektus(valgymogarsas, transform);
         }
+        joint = null;
+        forked = null;
     }
 }

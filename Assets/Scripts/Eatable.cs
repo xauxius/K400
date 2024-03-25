@@ -10,6 +10,7 @@ public class Eatable : MonoBehaviour
     private int meshIndex = 0;
 
     // Eating
+    public bool DisableRespawn = false;
     public Mouth mouth;
     private bool eating = false;
 
@@ -58,7 +59,10 @@ public class Eatable : MonoBehaviour
         meshIndex = 0;
         meshFilter.mesh = meshes[0];
 
-        Instantiate(gameObject, startPosition, startRotation);
+        if (!DisableRespawn)
+        {
+            Instantiate(gameObject, startPosition + Vector3.up * 0.1f, startRotation);
+        }
         Destroy(gameObject);
     } 
 }
