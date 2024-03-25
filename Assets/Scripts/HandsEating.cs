@@ -32,7 +32,7 @@ public class HandsEating : Grabbing
 		float dist = Vector3.Distance(plate.transform.position, transform.position);
 		float dist2 = Vector3.Distance(plate2.transform.position, transform.position);
 
-		Debug.Log(dist2);
+		//Debug.Log(dist2);
 		if (dist <= dist2) {
 			transform.position = new Vector3(plate.transform.position.x, (float)(plate.transform.position.y + 0.3),
 											 plate.transform.position.z);

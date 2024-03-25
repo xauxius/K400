@@ -297,6 +297,68 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d51e6ba1fdc25b741b89ee1ca683edd0, type: 3}
   m_PrefabInstance: {fileID: 654527574}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &132582535 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e68a4a90d20df214488179abb1ba965d, type: 3}
+  m_PrefabInstance: {fileID: 916094836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &166424461
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4058773793260153623, guid: 85dc8be656df67448998ec99e6e44ab4, type: 3}
+      propertyPath: m_Name
+      value: menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949494126307223960, guid: 85dc8be656df67448998ec99e6e44ab4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.809
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949494126307223960, guid: 85dc8be656df67448998ec99e6e44ab4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.779
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949494126307223960, guid: 85dc8be656df67448998ec99e6e44ab4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.543
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949494126307223960, guid: 85dc8be656df67448998ec99e6e44ab4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949494126307223960, guid: 85dc8be656df67448998ec99e6e44ab4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949494126307223960, guid: 85dc8be656df67448998ec99e6e44ab4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949494126307223960, guid: 85dc8be656df67448998ec99e6e44ab4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949494126307223960, guid: 85dc8be656df67448998ec99e6e44ab4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949494126307223960, guid: 85dc8be656df67448998ec99e6e44ab4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949494126307223960, guid: 85dc8be656df67448998ec99e6e44ab4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85dc8be656df67448998ec99e6e44ab4, type: 3}
 --- !u!1 &168790706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,7 +1728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d51e6ba1fdc25b741b89ee1ca683edd0, type: 3}
       propertyPath: m_Name
-      value: sriuba
+      value: Sriuba
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d51e6ba1fdc25b741b89ee1ca683edd0, type: 3}
       propertyPath: m_TagString
@@ -1685,6 +1747,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d51e6ba1fdc25b741b89ee1ca683edd0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 654527583}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d51e6ba1fdc25b741b89ee1ca683edd0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 654527584}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d51e6ba1fdc25b741b89ee1ca683edd0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 654527582}
@@ -1917,6 +1982,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &654527584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89362059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9caae2ed98929374581525c391bcf1b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Notes: "Kold\u016Bnai\r\nVanduo \r\nMorkos\r\nPaprikos\r\nSvog\u016Bnai\r\nPrieskoniai"
 --- !u!1 &656646157 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f25fa380e1bc0d3489ea53cbdb32cfe7, type: 3}
@@ -2519,7 +2597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e68a4a90d20df214488179abb1ba965d, type: 3}
       propertyPath: m_Name
-      value: mesa
+      value: "M\u0117sa"
       objectReference: {fileID: 0}
     - target: {fileID: 972740498066488443, guid: e68a4a90d20df214488179abb1ba965d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2545,6 +2623,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e68a4a90d20df214488179abb1ba965d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 916094838}
     - targetCorrespondingSourceObject: {fileID: 677495069735667877, guid: e68a4a90d20df214488179abb1ba965d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 859999377}
@@ -2596,6 +2677,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e68a4a90d20df214488179abb1ba965d, type: 3}
   m_PrefabInstance: {fileID: 916094836}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &916094838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132582535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9caae2ed98929374581525c391bcf1b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Notes: "200 gram\u0173          \tKiaulienos\n1 \u0161auk\u0161tas \t\tAlyvuogi\u0173
+    aliejaus\n30 gram\u0173 \t\tSojos\r\n2 skiltel\u0117s \t\t\u010Cesnako\r\n1 \u0161auk\u0161tas
+    \t\tMedaus\r\n1 \u0161auk\u0161telis \t\tSezam\u0173 aliejaus\r\nJuodieji pipirai\r\nImbieras\t"
 --- !u!114 &1051317047 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4763085286836561808, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
@@ -2890,7 +2986,7 @@ GameObject:
   - component: {fileID: 1143920170}
   - component: {fileID: 1143920169}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Effektai
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3137,8 +3233,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.1344165, y: 0.7060248, z: 0.7995429}
-  m_Center: {x: -0.00000008940696, y: 0, z: 0.39964628}
+  m_Size: {x: 1.1344168, y: 0.7060248, z: 0.8152231}
+  m_Center: {x: -0.00000011338095, y: 0, z: 0.40748638}
 --- !u!1001 &1510264337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4156,7 +4252,7 @@ PrefabInstance:
       objectReference: {fileID: 3443814402017613639, guid: fde4035fd5e0a4c42abf62102b2a4906, type: 3}
     - target: {fileID: 919132149155446097, guid: fde4035fd5e0a4c42abf62102b2a4906, type: 3}
       propertyPath: m_Name
-      value: croissant_4k
+      value: Kruasanas
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fde4035fd5e0a4c42abf62102b2a4906, type: 3}
       propertyPath: m_TagString
@@ -4181,6 +4277,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fde4035fd5e0a4c42abf62102b2a4906, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1839004306}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fde4035fd5e0a4c42abf62102b2a4906, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1839004307}
   m_SourcePrefab: {fileID: 100100000, guid: fde4035fd5e0a4c42abf62102b2a4906, type: 3}
 --- !u!4 &1839004297 stripped
 Transform:
@@ -4431,6 +4530,20 @@ MonoBehaviour:
   eatingSound: {fileID: 8300000, guid: 229f8d171e2f5e54b97565e0ea793436, type: 3}
   DisableRespawn: 0
   mouth: {fileID: 55077601}
+--- !u!114 &1839004307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844345689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9caae2ed98929374581525c391bcf1b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Notes: "Kvietiniai miltai, vanduo, sviestas, cukrus, miel\u0117s, kiau\u0161ini\u0173
+    mas\u0117, druska"
 --- !u!1001 &1860580984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5819,3 +5932,4 @@ SceneRoots:
   - {fileID: 219727969}
   - {fileID: 370651068}
   - {fileID: 1143920170}
+  - {fileID: 166424461}
