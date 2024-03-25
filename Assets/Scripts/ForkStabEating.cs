@@ -5,7 +5,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class ForkStabEating : Grabbing
 {
-    [SerializeField] private AudioClip valgymogarsas;
     public float stabTreshold = 0.1f;
 
     private GameObject forked;
@@ -77,13 +76,12 @@ public class ForkStabEating : Grabbing
     public override void HandleActivate(ActivateEventArgs args)
     {
         Eatable food = joint.connectedBody.gameObject.GetComponent<Eatable>();
-        Destroy(joint);
         if (food is not null)
         {
+            Destroy(joint);
             food.Eat();
-            SoundManager.instance.playEfektus(valgymogarsas, transform);
+            joint = null;
+            forked = null;
         }
-        joint = null;
-        forked = null;
     }
 }

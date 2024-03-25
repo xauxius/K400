@@ -4,13 +4,14 @@ using static UnityEngine.Rendering.DebugUI;
 
 public class SpoonEating : MonoBehaviour
 {
+	[SerializeField] private AudioClip valgymogarsas;
 	private bool antsauksto = false;
+	
 	private void Start()
 	{
 		transform.GetChild(0).gameObject.SetActive(false);
 	}
 
-	[SerializeField] private AudioClip valgymogarsas;
 	void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Spoonable"))
@@ -26,9 +27,7 @@ public class SpoonEating : MonoBehaviour
 
 				antsauksto = true;
 
-				eatable.Eat();
-
-			
+				eatable.Eat(false);			
 			}
         }
     }
@@ -39,7 +38,6 @@ public class SpoonEating : MonoBehaviour
 			antsauksto = false ;
 			transform.GetChild(0).gameObject.SetActive(false);
 			SoundManager.instance.playEfektus(valgymogarsas, transform);
-			
 		}
 	}
 }

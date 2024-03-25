@@ -10,6 +10,7 @@ public class Eatable : MonoBehaviour
     private int meshIndex = 0;
 
     // Eating
+    [SerializeField] private AudioClip eatingSound;
     public bool DisableRespawn = false;
     public Mouth mouth;
     private bool eating = false;
@@ -42,8 +43,11 @@ public class Eatable : MonoBehaviour
         }
     }
 
-    public void Eat()
+    public void Eat(bool shouldPlaySound = true)
     {
+        if (shouldPlaySound)
+            SoundManager.instance.playEfektus(eatingSound, transform);
+            
         if (++meshIndex < meshes.Count) {
             meshFilter.mesh = meshes[meshIndex];
         } else if (last != null) {
@@ -56,12 +60,15 @@ public class Eatable : MonoBehaviour
 
     void ResetFood()
     {
-        meshIndex = 0;
-        meshFilter.mesh = meshes[0];
+        if (meshes.Count > 0) 
+        {
+            meshIndex = 0;
+            meshFilter.mesh = meshes[0];
+        }
 
         if (!DisableRespawn)
         {
-            Instantiate(gameObject, startPosition + Vector3.up * 0.1f, startRotation);
+            Instantiate(gameObject, startPosition, startRotation);
         }
         Destroy(gameObject);
     } 

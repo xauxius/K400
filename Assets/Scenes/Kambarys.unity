@@ -242,6 +242,51 @@ MonoBehaviour:
   m_DebugDrawJoints: 0
   m_VelocityPrefab: {fileID: 8538602047018081646, guid: 629fd7882ec6bfc499a5fcf20035282b, type: 3}
   m_VelocityType: 2
+--- !u!1 &55077599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 55077600}
+  - component: {fileID: 55077601}
+  m_Layer: 0
+  m_Name: Mouth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &55077600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55077599}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.099, z: -0.043}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1500002349}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &55077601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55077599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 144f07d19e2e7ae45971f3723e395dd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 0.1
 --- !u!1 &74491471 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 202d0421fb70db842a14d19a18f547d3, type: 3}
@@ -508,6 +553,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8733093507751517968, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       insertIndex: 1
       addedObject: {fileID: 43642780}
+    - targetCorrespondingSourceObject: {fileID: 7990873191231833676, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 55077600}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7990873191231833679, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       insertIndex: -1
@@ -748,6 +796,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshes: []
   last: {fileID: 0}
+  eatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
+  DisableRespawn: 1
+  mouth: {fileID: 55077601}
 --- !u!54 &501178006
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1081,7 +1132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f0f96bb46e86f4419200779b4c44b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valgymogarsas: {fileID: 0}
   stabTreshold: 0.1
 --- !u!1 &538121777 stripped
 GameObject:
@@ -1657,11 +1707,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meshes:
+  - {fileID: -5802886627041992079, guid: ac4a068d4027dde4fa1bb5b1b29fef4c, type: 3}
   - {fileID: -5802886627041992079, guid: 68459a94057920941a238143ed5e8cd9, type: 3}
   - {fileID: -5802886627041992079, guid: 214e9fd8942a3be459674172dd678c7f, type: 3}
   - {fileID: -5802886627041992079, guid: b7361793ea09a8a4da3f43062a1a4294, type: 3}
   - {fileID: -5802886627041992079, guid: 55c6273c7c921f347a9ab94be05a0fd5, type: 3}
   last: {fileID: -5802886627041992079, guid: d37b94239526ccd4fb9a04a6ca540502, type: 3}
+  eatingSound: {fileID: 0}
+  DisableRespawn: 0
+  mouth: {fileID: 55077601}
 --- !u!64 &654527579
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2247,6 +2301,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshes: []
   last: {fileID: 0}
+  eatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
+  DisableRespawn: 1
+  mouth: {fileID: 55077601}
 --- !u!54 &859999383
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2721,6 +2778,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshes: []
   last: {fileID: 0}
+  eatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
+  DisableRespawn: 1
+  mouth: {fileID: 55077601}
 --- !u!54 &1096227315
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2789,6 +2849,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshes: []
   last: {fileID: 0}
+  eatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
+  DisableRespawn: 1
+  mouth: {fileID: 55077601}
 --- !u!54 &1136722186
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2902,6 +2965,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshes: []
   last: {fileID: 0}
+  eatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
+  DisableRespawn: 1
+  mouth: {fileID: 55077601}
 --- !u!54 &1418630072
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2978,6 +3044,11 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!4 &1500002349 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7990873191231833676, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
+  m_PrefabInstance: {fileID: 370651068}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1508957235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3362,7 +3433,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f0f96bb46e86f4419200779b4c44b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valgymogarsas: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
   stabTreshold: 0.1
 --- !u!1 &1518444465
 GameObject:
@@ -4341,7 +4411,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 867f93dca40fa83428287538225691d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valgymogarsas: {fileID: 8300000, guid: 229f8d171e2f5e54b97565e0ea793436, type: 3}
 --- !u!114 &1839004306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4355,9 +4424,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meshes:
+  - {fileID: 3443814402017613639, guid: fde4035fd5e0a4c42abf62102b2a4906, type: 3}
   - {fileID: 3443814402017613639, guid: 60ecb230b64b70b4fb2a4da9cd8dd6ad, type: 3}
   - {fileID: 3443814402017613639, guid: 552cb504e60a43448a801714825750f6, type: 3}
   last: {fileID: 0}
+  eatingSound: {fileID: 8300000, guid: 229f8d171e2f5e54b97565e0ea793436, type: 3}
+  DisableRespawn: 0
+  mouth: {fileID: 55077601}
 --- !u!1001 &1860580984
 PrefabInstance:
   m_ObjectHideFlags: 0
