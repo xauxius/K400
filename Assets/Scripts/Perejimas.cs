@@ -6,7 +6,7 @@ public class Perejimas : MonoBehaviour
 {
     public void Jura()
     {
-		SceneManager.LoadScene("Jura");
+		SceneManager.LoadScene("Jura 360");
 	}
 	public void Kambarys()
 	{
