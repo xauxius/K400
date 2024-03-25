@@ -18,14 +18,20 @@ public class PatiekaluInfo : MonoBehaviour
 	
 		foreach (GameObject maist in maistas)
 		{
-			text.text += "<size=10px>" + "<align=\"center\">" + maist.name + "\n\n";
-			text.text += "<align=\"justified\">" + maist.GetComponent<Info>().Notes + "\n\n";
-			text.alignment = TextAlignmentOptions.Center;
+			if (maist.GetComponent<Info>() != null)
+			{
+				text.text += "<size=10px>" + "<align=\"center\">" + maist.name + "\n\n";
+				text.text += "<align=\"justified\">" + maist.GetComponent<Info>().Notes + "\n\n";
+				text.alignment = TextAlignmentOptions.Center;
+			}
 		}
 		foreach (GameObject maist in maistas2)
 		{
-			text.text += "<align=\"center\">" + maist.name + "\n\n";
-			text.text += "<align=\"justified\">" + maist.GetComponent<Info>().Notes + "\n\n";
+			if (maist.GetComponent<Info>() != null)
+			{
+				text.text += "<align=\"center\">" + maist.name + "\n\n";
+				text.text += "<align=\"justified\">" + maist.GetComponent<Info>().Notes + "\n\n";
+			}
 		}
 	}
 

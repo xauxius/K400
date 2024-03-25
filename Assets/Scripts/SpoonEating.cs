@@ -6,7 +6,17 @@ public class SpoonEating : MonoBehaviour
 {
 	[SerializeField] private AudioClip valgymogarsas;
 	private bool antsauksto = false;
-	
+
+	// Eating
+	[SerializeField] private AudioClip eatingSound;
+	public bool DisableRespawn = false;
+	public Mouth mouth;
+	private bool eating = false;
+
+	// Starting transform
+	private Vector3 startPosition;
+	private Quaternion startRotation;
+
 	private void Start()
 	{
 		transform.GetChild(0).gameObject.SetActive(false);
@@ -31,6 +41,24 @@ public class SpoonEating : MonoBehaviour
 			}
         }
     }
+	void Update()
+	{
+		
+		var distance = Vector3.Distance(mouth.transform.position, transform.position);
+
+		if (distance <= mouth.radius)
+		{
+			if (!eating)
+			{
+				Valgyti();
+				eating = true;
+			}
+		}
+		else
+		{
+			eating = false;
+		}
+	}
 	public void Valgyti()
 	{
 		if (antsauksto)

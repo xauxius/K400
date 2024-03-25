@@ -6,27 +6,31 @@ public class Nesimas : MonoBehaviour
 {
     public void Nesti()
     {
-		GameObject maistas = GameObject.FindWithTag("Food");
+		GameObject[] maistas = GameObject.FindGameObjectsWithTag("Food");
 
-		float dist = Vector3.Distance(maistas.transform.position, transform.position);
-
-
-		if (dist <= 0.2)
+		foreach (GameObject maist in maistas)
 		{
-			maistas.transform.parent = transform;
-			maistas.GetComponent<Rigidbody>().isKinematic = true;
-
+			float dist = Vector3.Distance(maist.transform.position, transform.position);
+			if (dist <= 0.2)
+			{
+			maist.transform.parent = transform;
+			maist.GetComponent<Rigidbody>().isKinematic = true;
+			}
 		}
+
+		
 
 	}
 	public void Atnesta()
 	{
-		GameObject maistas = GameObject.FindWithTag("Food");
-
-		if (transform.GetChild(0).gameObject == maistas)
+		GameObject[] maistas = GameObject.FindGameObjectsWithTag("Food");
+		foreach (GameObject maist in maistas)
 		{
-			maistas.GetComponent<Rigidbody>().isKinematic = false;
-			maistas.transform.parent = null;
+			if (transform.GetChild(0).gameObject == maist)
+			{
+				maist.GetComponent<Rigidbody>().isKinematic = false;
+				maist.transform.parent = null;
+			}
 		}
 
 	}
