@@ -28,7 +28,7 @@ public class SpoonEating : MonoBehaviour
         {
             Eatable eatable = collision.gameObject.GetComponent<Eatable>();
 
-            if (eatable is not null && antsauksto == false)
+            if (eatable is not null && antsauksto == false && eatable.enabled == true)
             {
 				
 				Material newMat = eatable.GetComponent<MeshRenderer>().material;

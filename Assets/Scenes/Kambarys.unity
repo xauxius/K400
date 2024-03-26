@@ -1234,7 +1234,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74491471}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1851,7 +1851,7 @@ MonoBehaviour:
   - {fileID: -5802886627041992079, guid: b7361793ea09a8a4da3f43062a1a4294, type: 3}
   - {fileID: -5802886627041992079, guid: 55c6273c7c921f347a9ab94be05a0fd5, type: 3}
   last: {fileID: -5802886627041992079, guid: d37b94239526ccd4fb9a04a6ca540502, type: 3}
-  eatingSound: {fileID: 0}
+  eatingSound: {fileID: 8300000, guid: d641a278debcfab4abead8e30f2238f2, type: 3}
   DisableRespawn: 0
   mouth: {fileID: 55077601}
 --- !u!64 &654527579
@@ -3491,7 +3491,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278398559}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -6526,7 +6526,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229533282725101462}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
