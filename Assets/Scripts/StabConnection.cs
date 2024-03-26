@@ -41,5 +41,6 @@ public class StabConnection
     public void FreeAxis()
     {
         joint.xMotion = ConfigurableJointMotion.Limited;
+        joint.anchor = anchor;
     }
 }

@@ -5,9 +5,7 @@ using System.Linq;
 public class StabManager
 {
     // private List<Collider> disabledColliders;
-
     private List<StabConnection> stabConnections;
-
     private List<RayCaster> rayCasters;
     private GameObject stabber;
     private Collider stabberCollider;
@@ -52,6 +50,11 @@ public class StabManager
         {
             stab.LimitAxis();
         }
+    }
+
+    private void CleanupDisabledColliders()
+    {
+        // Reiks sutvarkyt colliders :/
     }
 
     private bool SuitableForStab(GameObject obj)

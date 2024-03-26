@@ -3,6 +3,7 @@ using UnityEngine;
 public class ForkStabbing: MonoBehaviour
 {
     [SerializeField] private List<RayCaster> rayCasters;
+    
     private Vector3 lastPosition;
     private StabManager stabManager;
 
