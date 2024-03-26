@@ -56,7 +56,8 @@ public class StabManager
 
     private bool SuitableForStab(GameObject obj)
     {
-        return obj.CompareTag("Forkable");
+        return obj.GetComponent<Forkable>() != null;
+        // return obj.CompareTag("Forkable");
     }
 
     private void DisableStabbedColliders(GameObject stabbed)
