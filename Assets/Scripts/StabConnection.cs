@@ -4,23 +4,23 @@ public class StabConnection
 {
     public GameObject Stabber;
     public GameObject Stabbed;
-    private ConfigurableJoint joint;
+    public ConfigurableJoint Joint;
     private Vector3 anchor = new Vector3(0, 0, 0);
 
     private StabConnection(GameObject stabber, GameObject stabbed, ConfigurableJoint joint)
     {
         Stabber = stabber;
         Stabbed = stabbed;
-        this.joint = joint;
+        Joint = joint;
     }
 
-    public static StabConnection CreateConnection(GameObject stabber, GameObject stabbed)
+    public static StabConnection CreateConnection(GameObject stabber, GameObject stabbed, Axis freeAxis)
     {
         var joint = stabber.AddComponent<ConfigurableJoint>();
 
-        joint.xMotion = ConfigurableJointMotion.Free;
-        joint.yMotion = ConfigurableJointMotion.Locked;
-        joint.zMotion = ConfigurableJointMotion.Locked;
+        joint.xMotion = freeAxis == Axis.X ? ConfigurableJointMotion.Free : ConfigurableJointMotion.Locked;
+        joint.yMotion = freeAxis == Axis.Y ? ConfigurableJointMotion.Free : ConfigurableJointMotion.Locked;
+        joint.zMotion = freeAxis == Axis.Z ? ConfigurableJointMotion.Free : ConfigurableJointMotion.Locked;
         joint.angularXMotion = ConfigurableJointMotion.Locked;
         joint.angularYMotion = ConfigurableJointMotion.Locked;
         joint.angularZMotion = ConfigurableJointMotion.Locked;
@@ -34,12 +34,13 @@ public class StabConnection
 
     public void LimitAxis()
     {
-        joint.xMotion = ConfigurableJointMotion.Locked;
-        joint.anchor = anchor;
+        Joint.xMotion = ConfigurableJointMotion.Locked;
+        Joint.anchor = anchor;
     }
 
     public void FreeAxis()
     {
-        joint.xMotion = ConfigurableJointMotion.Limited;
+        Joint.xMotion = ConfigurableJointMotion.Limited;
+        Joint.anchor = anchor;
     }
 }

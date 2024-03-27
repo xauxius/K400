@@ -5,44 +5,30 @@ using System.Linq;
 public class StabManager
 {
     // private List<Collider> disabledColliders;
-
-    private List<StabConnection> stabConnections;
-
-    private List<RayCaster> rayCasters;
-    private GameObject stabber;
+    public List<StabConnection> stabConnections;
     private Collider stabberCollider;
+    private GameObject stabber;
+    private Axis freeAxis;
 
-    public StabManager(GameObject stabber, List<RayCaster> rayCasters)
+    public StabManager(GameObject stabber, Axis freeAxis)
     {
         this.stabber = stabber;
-        this.rayCasters = rayCasters;
+        this.freeAxis = freeAxis;
 
         stabConnections = new List<StabConnection>();
         stabberCollider = stabber.GetComponent<Collider>();
     }
 
-    public void Update()
+    public void ProcessRayStabbing(RaycastHit hit)
     {
-        foreach (var rayCaster in rayCasters)
+        var stabbed = hit.collider.gameObject;
+
+        DisableStabbedColliders(stabbed);
+
+        if (hit.distance <= 0.005)
         {
-            RaycastHit hit;
-            var didHit = Physics.Raycast(rayCaster.GetRay(), out hit, rayCaster.RayDistance);
-
-            if (didHit)
-            {
-                var stabbed = hit.collider.gameObject;
-
-                if (SuitableForStab(stabbed))
-                {
-                    DisableStabbedColliders(stabbed);
-
-                    if (hit.distance <= 0.005)
-                    {
-                        if (!ObjectAllreadyStabbed(stabbed))
-                            stabConnections.Add(StabConnection.CreateConnection(stabber, stabbed));
-                    }
-                }
-            }
+            if (!ObjectAllreadyStabbed(stabbed))
+                stabConnections.Add(StabConnection.CreateConnection(stabber, stabbed, freeAxis));
         }
     }
 
@@ -54,9 +40,14 @@ public class StabManager
         }
     }
 
-    private bool SuitableForStab(GameObject obj)
+    private void CleanupDisabledColliders()
     {
-        return obj.GetComponent<Forkable>() != null;
+        // Reiks sutvarkyt colliders :/
+    }
+
+    public bool SuitableForStab(GameObject obj)
+    {
+        return obj.GetComponent<Stabable>() != null;
         // return obj.CompareTag("Forkable");
     }
 

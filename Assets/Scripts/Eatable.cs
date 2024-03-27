@@ -4,14 +4,14 @@ using UnityEngine;
 public class Eatable : MonoBehaviour
 {
     // Managing mesh
-    public List<Mesh> meshes;
+    public List<Mesh> meshes = new List<Mesh>();
     public Mesh last;
     private MeshFilter meshFilter;
     private int meshIndex = 0;
 
     // Eating
-    [SerializeField] private AudioClip eatingSound;
-    public bool DisableRespawn = false;
+    public AudioClip eatingSound;
+    public bool disableRespawn = true;
     public Mouth mouth;
     private bool eating = false;
 
@@ -66,7 +66,7 @@ public class Eatable : MonoBehaviour
             meshFilter.mesh = meshes[0];
         }
 
-        if (!DisableRespawn)
+        if (!disableRespawn)
         {
             Instantiate(gameObject, startPosition, startRotation);
         }

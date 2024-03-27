@@ -1,20 +1,11 @@
-using System.Collections.Generic;
 using UnityEngine;
-public class ForkStabbing: MonoBehaviour
+
+public class ForkAction: GeneralStabbing
 {
-    [SerializeField] private List<RayCaster> rayCasters;
     private Vector3 lastPosition;
-    private StabManager stabManager;
 
-    void Start()
+    public override void UpdateExtra()
     {
-        stabManager = new StabManager(gameObject, rayCasters);
-    }
-
-    void Update()
-    {
-        stabManager.Update();
-
         if (ForkIsGoingBack())
         {
             stabManager.StickObjects();

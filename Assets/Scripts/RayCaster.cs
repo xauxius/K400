@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class RayCaster: MonoBehaviour
@@ -14,5 +15,21 @@ public class RayCaster: MonoBehaviour
     public Ray GetRay()
     {
         return new Ray(transform.position, transform.up);
+    }
+
+    public static List<RaycastHit> RayCastRays(List<RayCaster> rayCasters)
+    {
+        List<RaycastHit> hits = new List<RaycastHit>();
+        foreach (var rayCaster in rayCasters)
+        {
+            RaycastHit hit;
+            var didHit = Physics.Raycast(rayCaster.GetRay(), out hit, rayCaster.RayDistance);
+
+            if (didHit)
+            {
+                hits.Add(hit);
+            }
+        }
+        return hits;
     }
 }
