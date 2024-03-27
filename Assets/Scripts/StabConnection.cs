@@ -27,7 +27,9 @@ public class StabConnection
 
         joint.linearLimit = new SoftJointLimit {limit = 0.1f}; // Galbūt reiks pažiūrėt kokį limitą čia uždėt
 
-        joint.connectedBody = stabbed.gameObject.GetComponent<Rigidbody>();
+        Rigidbody rb = stabbed.gameObject.GetComponent<Rigidbody>();
+        rb.mass = 0;
+        joint.connectedBody = rb;
 
         return new StabConnection(stabber, stabbed, joint);
     }
