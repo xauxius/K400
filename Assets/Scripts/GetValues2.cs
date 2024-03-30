@@ -4,18 +4,18 @@ using TMPro;
 using UnityEditor.Sprites;
 using UnityEngine;
 
-public class GetValues : MonoBehaviour
+public class GetValues2 : MonoBehaviour
 {
 	[SerializeField] private TMP_Dropdown dropdown;
-	public static string vardas;
+	public static string vardas2;
 
 	public void Start()
 	{
-		vardas = dropdown.options[0].text;
+		vardas2 = dropdown.options[0].text;
 	}
 	public void GetValue(){
 		int picked = dropdown.value;
 		string selected = dropdown.options[picked].text;
-		vardas = selected;
+		vardas2 = selected;
 	}
 }
