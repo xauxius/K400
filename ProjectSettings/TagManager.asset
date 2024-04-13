@@ -11,6 +11,7 @@ TagManager:
   - Lekste2
   - Food
   - Mouth
+  - LiquidParticle
   layers:
   - Default
   - TransparentFX

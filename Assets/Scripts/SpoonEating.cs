@@ -4,7 +4,6 @@ using static UnityEngine.Rendering.DebugUI;
 
 public class SpoonEating : MonoBehaviour
 {
-	[SerializeField] private AudioClip valgymogarsas;
 	private bool antsauksto = false;
 
 	// Eating
@@ -65,7 +64,7 @@ public class SpoonEating : MonoBehaviour
 		{
 			antsauksto = false ;
 			transform.GetChild(0).gameObject.SetActive(false);
-			SoundManager.instance.playEfektus(valgymogarsas, transform);
+			SoundManager.instance.playEfektus(eatingSound, transform);
 		}
 	}
 }
