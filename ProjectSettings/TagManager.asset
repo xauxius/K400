@@ -12,6 +12,7 @@ TagManager:
   - Food
   - Mouth
   - LiquidParticle
+  - DrinkPos
   layers:
   - Default
   - TransparentFX
