@@ -85,6 +85,7 @@ public class Drink : MonoBehaviour
 	}
 	public void Refill()
 	{
+	
 		director.timeUpdateMode = DirectorUpdateMode.GameTime;
 		var distance = Vector3.Distance(coffemachine.transform.position, transform.position);
 		if (distance <= 0.5)
