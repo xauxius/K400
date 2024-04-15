@@ -4114,6 +4114,7 @@ GameObject:
   - component: {fileID: 1143494397211788042}
   - component: {fileID: 4607486088237668234}
   - component: {fileID: 6338002871203426316}
+  - component: {fileID: 6338002871203426317}
   m_Layer: 0
   m_Name: Cube_002
   m_TagString: LiquidParticle
@@ -4159,6 +4160,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faceSetNames:
   - 
+--- !u!114 &6338002871203426317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5849736185956341941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eca8fc92b90f3d429bdbb68d789db8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6855374662702679165
 GameObject:
   m_ObjectHideFlags: 0
