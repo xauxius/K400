@@ -52,9 +52,8 @@ public class Drink : MonoBehaviour
 		if (refiling)
 		{
 			director.Play();
-			streamPlayerScript.CurrentTime = (float)director.time;
 			drinkable = true;
-			if (director.time >= timetostop - 0.025)
+			if (director.time >= timetostop - 0.03)
 			{
 				streamPlayerScript.CurrentTime = streamPlayerScript.EndTime;
 				director.Pause();
