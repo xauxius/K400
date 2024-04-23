@@ -17,10 +17,8 @@ public class Drink : MonoBehaviour
 	public AlembicStreamPlayer streamPlayerScript;
 	public GameObject coffemachine;
 	float timetostop;
+	[SerializeField] private AudioClip poursound;
 
-	// Starting transform
-	private Vector3 startPosition;
-	private Quaternion startRotation;
 	GameObject[] particles;
 	// Start is called before the first frame update
 	void Start()
@@ -46,11 +44,18 @@ public class Drink : MonoBehaviour
 		}
 		else
 		{
+			if (drinking == true)
+			{
+				SoundManager.instance.destroyEffects();
+			}
 			drinking = false;
 			director.Pause();
+			
 		}
 		if (refiling)
 		{
+
+			SoundManager.instance.playEfektus(poursound, transform);
 			director.Play();
 			drinkable = true;
 			if (director.time >= timetostop - 0.03)

@@ -7,6 +7,7 @@ public class SoundManager : MonoBehaviour
 	public static SoundManager instance;
 
 	[SerializeField] private AudioSource m_AudioSource;
+	AudioSource audioSource;
 
 	public void Awake()
 	{
@@ -15,9 +16,15 @@ public class SoundManager : MonoBehaviour
 	}
 	public void playEfektus(AudioClip audioClip, Transform spawntransform){
 
-		AudioSource audioSource = Instantiate(m_AudioSource, spawntransform.position, Quaternion.identity);
-		audioSource.clip = audioClip;
-		audioSource.Play();
-		Destroy(audioSource.gameObject, 1);
+			audioSource = Instantiate(m_AudioSource, spawntransform.position, Quaternion.identity);
+			audioSource.clip = audioClip;
+			audioSource.Play();
+	}
+	public void destroyEffects()
+	{
+		if (audioSource != null)
+		{
+			Destroy(audioSource.gameObject, 1);
+		}
 	}
 }
