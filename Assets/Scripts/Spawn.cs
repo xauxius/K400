@@ -89,6 +89,24 @@ public class Spawn : MonoBehaviour
 			}
 
 		}
+		if (name == "Ryžiai")
+		{
+
+				string path = "Assets/Spawninimui";
+				path += "/" + name + ".prefab";
+				Object prefab = AssetDatabase.LoadAssetAtPath(path, typeof(GameObject));
+
+				Quaternion startRotation = Quaternion.Euler(mr.x, mr.y, mr.z);
+				mouth = GameObject.FindGameObjectWithTag("Mouth");
+				prefab.GetComponent<Eatable2>().mouth = mouth.GetComponent<Mouth>();
+			
+				if (prefab.GetComponent<Info>().Indas == true)
+				{
+					DestroyImmediate(Lekste1, true);
+				}
+				Instantiate(prefab, ms, startRotation);
+			
+		}
 		else
 		{
 			string path = "Assets/Spawninimui";

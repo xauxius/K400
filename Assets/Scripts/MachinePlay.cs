@@ -34,6 +34,14 @@ public class MachinePlay : MonoBehaviour
 			streamPlayerScript.CurrentTime = 0;
 			SoundManager.instance.destroyEffects();
 		}
+		if (werefilling  && !stopedrefiling)
+		{
+			var distance = Vector3.Distance(cup.transform.position, coffemachinecup.transform.position);
+			if (distance > 0.05)
+			{
+				stopedrefiling = true;
+			}
+		}
 
 	
 

@@ -320,7 +320,7 @@ MonoBehaviour:
   - {fileID: 3443814402017613639, guid: 60ecb230b64b70b4fb2a4da9cd8dd6ad, type: 3}
   - {fileID: 3443814402017613639, guid: 552cb504e60a43448a801714825750f6, type: 3}
   last: {fileID: 0}
-  eatingSound: {fileID: 8300000, guid: 229f8d171e2f5e54b97565e0ea793436, type: 3}
+  EatingSound: {fileID: 8300000, guid: 229f8d171e2f5e54b97565e0ea793436, type: 3}
   disableRespawn: 1
   mouth: {fileID: 0}
 --- !u!114 &2327627930394688778

@@ -10,7 +10,7 @@ public class Eatable : MonoBehaviour
     private int meshIndex = 0;
 
     // Eating
-    public AudioClip eatingSound;
+    public AudioClip EatingSound;
     public bool disableRespawn = true;
     public Mouth mouth;
     private bool eating = false;
@@ -46,7 +46,7 @@ public class Eatable : MonoBehaviour
     public void Eat(bool shouldPlaySound = true)
     {
         if (shouldPlaySound)
-            SoundManager.instance.playEfektus(eatingSound, transform);
+            SoundManager.instance.playEfektus(EatingSound, transform);
             
         if (++meshIndex < meshes.Count) {
             meshFilter.mesh = meshes[meshIndex];

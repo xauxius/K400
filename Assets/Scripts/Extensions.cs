@@ -15,7 +15,7 @@ public static class Extensions
 
     public static void Copy(this Eatable eatable, Eatable other)
     {
-        eatable.eatingSound = other.eatingSound;
+        eatable.EatingSound = other.EatingSound;
         eatable.mouth = other.mouth;
         eatable.disableRespawn = true;
     }

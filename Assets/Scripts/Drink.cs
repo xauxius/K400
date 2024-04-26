@@ -54,8 +54,6 @@ public class Drink : MonoBehaviour
 		}
 		if (refiling)
 		{
-
-			SoundManager.instance.playEfektus(poursound, transform);
 			director.Play();
 			drinkable = true;
 			if (director.time >= timetostop - 0.03)
@@ -89,11 +87,13 @@ public class Drink : MonoBehaviour
 	}
 	public void Refill()
 	{
-	
-		director.timeUpdateMode = DirectorUpdateMode.GameTime;
+
+		
 		var distance = Vector3.Distance(coffemachine.transform.position, transform.position);
 		if (distance <= 0.5)
 		{
+			SoundManager.instance.playEfektus(poursound, transform);
+			director.timeUpdateMode = DirectorUpdateMode.GameTime;
 			transform.position = coffemachine.transform.position;
 			transform.rotation = coffemachine.transform.rotation;
 			foreach (GameObject par in particles)
