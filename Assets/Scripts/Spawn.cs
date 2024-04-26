@@ -51,6 +51,8 @@ public class Spawn : MonoBehaviour
 		v3 = new Vector3((float)273.048126, (float)29.6944389, (float)240.372345);
 		Spawning(vardas4, start, v, startPosition, v3);
 
+		Debug.Log(vardas4);
+
 	}
 	void Spawning(string vardas, Vector3 ls, Vector3 lr, Vector3 ms, Vector3 mr) {
 
@@ -89,7 +91,7 @@ public class Spawn : MonoBehaviour
 			}
 
 		}
-		if (name == "Ryžiai")
+		else if (name == "Ryžiai")
 		{
 
 				string path = "Assets/Spawninimui";
@@ -106,6 +108,29 @@ public class Spawn : MonoBehaviour
 				}
 				Instantiate(prefab, ms, startRotation);
 			
+		}
+		else if (name == "Sausainiai")
+		{
+
+			string path = "Assets/Spawninimui";
+			path += "/" + name + ".prefab";
+			Object prefab = AssetDatabase.LoadAssetAtPath(path, typeof(GameObject));
+
+			Quaternion startRotation = Quaternion.Euler(mr.x, mr.y, mr.z);
+			mouth = GameObject.FindGameObjectWithTag("Mouth");
+			
+			foreach (Eatable sausainis in prefab.GetComponentsInChildren<Eatable>()) 
+			{
+				sausainis.mouth = mouth.GetComponent<Mouth>();
+			}
+	
+
+			if (prefab.GetComponent<Info>().Indas == true)
+			{
+				DestroyImmediate(Lekste1, true);
+			}
+
+			Instantiate(prefab, ms, startRotation);
 		}
 		else
 		{

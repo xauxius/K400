@@ -580,6 +580,8 @@ MonoBehaviour:
   mouth: {fileID: 0}
   director: {fileID: 4678521870796687247}
   streamPlayerScript: {fileID: 8054101510816572396}
+  coffemachine: {fileID: 0}
+  poursound: {fileID: 0}
 --- !u!65 &6810978752412154871
 BoxCollider:
   m_ObjectHideFlags: 0

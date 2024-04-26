@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 6356115846396234270}
   - component: {fileID: 7289913908349529095}
   - component: {fileID: 374352297142329580}
-  - component: {fileID: 9137153960796410007}
   - component: {fileID: 5895992654414847618}
   - component: {fileID: 2874304062444551763}
   - component: {fileID: 3304981795493412313}
+  - component: {fileID: 2722931728006382158}
   m_Layer: 0
   m_Name: Lekste
   m_TagString: Lekste2
@@ -89,27 +89,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &9137153960796410007
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1083583661542586696}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.54187024, y: 0.54187036, z: 0.05378473}
-  m_Center: {x: -0.000000059604645, y: -0.00000023841858, z: 0.12379608}
 --- !u!54 &5895992654414847618
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -118,7 +97,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083583661542586696}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -325,3 +304,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277a584bc8142974b8ceb39e13d3b7b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!64 &2722931728006382158
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083583661542586696}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3736213754101489272, guid: 57b73aa49b0061544afce8072bedd1b1, type: 3}

@@ -19,7 +19,10 @@ public class Eatable : MonoBehaviour
     private Vector3 startPosition;
     private Quaternion startRotation;
 
-    void Start()
+	float targetTime = 2.0f;
+	bool groja = false;
+
+	void Start()
     {
         startPosition = transform.position.Copy();
         startRotation = transform.rotation.Copy();
@@ -38,15 +41,27 @@ public class Eatable : MonoBehaviour
                 Eat();
                 eating = true;
             }
-        } else {
-            eating = false;
-        }
-    }
+        } 
+		if (groja)
+		{
+			targetTime -= Time.deltaTime;
+
+			if (targetTime <= 0.0f)
+			{
+				SoundManager.instance.destroyEffects();
+				groja = false;
+				targetTime = 2.0f;
+				eating = false;
+			}
+		}
+      
+	}
 
     public void Eat(bool shouldPlaySound = true)
     {
         if (shouldPlaySound)
             SoundManager.instance.playEfektus(EatingSound, transform);
+            groja = true;
             
         if (++meshIndex < meshes.Count) {
             meshFilter.mesh = meshes[meshIndex];
@@ -70,6 +85,8 @@ public class Eatable : MonoBehaviour
         {
             Instantiate(gameObject, startPosition, startRotation);
         }
-        Destroy(gameObject);
-    } 
+		SoundManager.instance.destroyEffects2();
+		Destroy(gameObject);
+
+	} 
 }

@@ -24,7 +24,14 @@ public class SoundManager : MonoBehaviour
 	{
 		if (audioSource != null)
 		{
-			Destroy(audioSource.gameObject, 1);
+			Destroy(audioSource.gameObject);
+		}
+	}
+	public void destroyEffects2()
+	{
+		if (audioSource != null)
+		{
+			Destroy(audioSource.gameObject, 2.0F);
 		}
 	}
 }

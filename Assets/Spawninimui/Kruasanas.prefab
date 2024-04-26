@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 5971790488839764889}
   - component: {fileID: 9183589535897200636}
   - component: {fileID: 6947180661067850471}
-  - component: {fileID: 1090160101272341129}
   - component: {fileID: 4190522236516522748}
   - component: {fileID: 1540769567635347941}
   - component: {fileID: 2327627930394688778}
+  - component: {fileID: 4384726586764548900}
   m_Layer: 0
   m_Name: Kruasanas
   m_TagString: Food
@@ -32,8 +32,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4319354776879004982}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.9596625, y: 0.23, z: -2.0051}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -270,27 +270,6 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!65 &1090160101272341129
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4319354776879004982}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.2, y: 0.07551151, z: 0.061995663}
-  m_Center: {x: 0.0020834655, y: -0.0054549403, z: 0.029964209}
 --- !u!114 &4190522236516522748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,3 +318,25 @@ MonoBehaviour:
   Notes: "Kvietiniai miltai\nVanduo\nSviestas\nCukrus\nMiel\u0117s\nKiau\u0161ini\u0173
     mas\u0117\nDruska"
   Indas: 0
+--- !u!64 &4384726586764548900
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4319354776879004982}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3443814402017613639, guid: fde4035fd5e0a4c42abf62102b2a4906, type: 3}

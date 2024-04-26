@@ -26,7 +26,6 @@ public class SpoonEating : MonoBehaviour
 
 	void OnCollisionEnter(Collision collision)
     {
-		Debug.Log(collision.gameObject.name + collision.gameObject.tag);
         if (collision.gameObject.CompareTag("Spoonable"))
         {
 			Eatable eatable = collision.gameObject.GetComponent<Eatable>();
