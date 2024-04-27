@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5981446902795081749}
   m_Layer: 0
   m_Name: Sausainiai
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -353,6 +353,7 @@ MonoBehaviour:
   EatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
   disableRespawn: 1
   mouth: {fileID: 0}
+  shouldPlaySound: 1
 --- !u!64 &1475061467530277149
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -676,6 +677,7 @@ MonoBehaviour:
   EatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
   disableRespawn: 1
   mouth: {fileID: 0}
+  shouldPlaySound: 1
 --- !u!64 &4234483525672368038
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -999,6 +1001,7 @@ MonoBehaviour:
   EatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
   disableRespawn: 1
   mouth: {fileID: 0}
+  shouldPlaySound: 1
 --- !u!64 &4491956437014635288
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1322,6 +1325,7 @@ MonoBehaviour:
   EatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
   disableRespawn: 1
   mouth: {fileID: 0}
+  shouldPlaySound: 1
 --- !u!64 &3328220255697930946
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1645,6 +1649,7 @@ MonoBehaviour:
   EatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
   disableRespawn: 1
   mouth: {fileID: 0}
+  shouldPlaySound: 1
 --- !u!64 &1936904796380661690
 MeshCollider:
   m_ObjectHideFlags: 0

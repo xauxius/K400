@@ -32,13 +32,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4319354776879004982}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!33 &6321932446276970524
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -302,6 +302,7 @@ MonoBehaviour:
   EatingSound: {fileID: 8300000, guid: 229f8d171e2f5e54b97565e0ea793436, type: 3}
   disableRespawn: 1
   mouth: {fileID: 0}
+  shouldPlaySound: 1
 --- !u!114 &2327627930394688778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,8 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pavadinimas: Kruasanas
-  Notes: "Kvietiniai miltai\nVanduo\nSviestas\nCukrus\nMiel\u0117s\nKiau\u0161ini\u0173
-    mas\u0117\nDruska"
+  Notes: "Kvietiniai miltai\nMiel\u0117s\nKiau\u0161ini\u0173 mas\u0117\nDruska\nVanduo\nSviestas\nCukrus"
   Indas: 0
 --- !u!64 &4384726586764548900
 MeshCollider:

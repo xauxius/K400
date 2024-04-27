@@ -7,7 +7,8 @@ public class PatiekaluInfo : MonoBehaviour
 {
 	
     public TMP_Text text;
-	
+	public TMP_Text text1;
+
 	void Start()
     {
 
@@ -18,28 +19,59 @@ public class PatiekaluInfo : MonoBehaviour
 
 
 		text.text = "<size=20px>" + "<align=\"center\">" + "Menu\n\n";
-	
+		text1.text = "<size=20px>" + "<align=\"center\">" + "Menu\n\n";
+
+		int sk = 0;
+
 		foreach (GameObject maist in maistas)
 		{
-			if (maist.GetComponent<Info>() != null && maist.GetComponent<Info>().Pavadinimas != "NE" &&
-				!pav.Contains(maist.GetComponent<Info>().Pavadinimas))
+			if (sk % 2 == 0)
 			{
-			
-				text.text += "<size=10px>" + "<align=\"center\">" + maist.GetComponent<Info>().Pavadinimas + "\n\n";
-				text.text += "<align=\"justified\">" + maist.GetComponent<Info>().Notes + "\n\n";
-				text.alignment = TextAlignmentOptions.Center;
-				pav.Add(maist.GetComponent<Info>().Pavadinimas);
+				if (maist.GetComponent<Info>() != null && maist.GetComponent<Info>().Pavadinimas != "NE" &&
+					!pav.Contains(maist.GetComponent<Info>().Pavadinimas))
+				{
+
+					text.text += "<size=10px>" + "<align=\"center\">" + maist.GetComponent<Info>().Pavadinimas + "\n\n";
+					text.text += "<align=\"justified\">" + maist.GetComponent<Info>().Notes + "\n\n";
+					text.alignment = TextAlignmentOptions.Center;
+					pav.Add(maist.GetComponent<Info>().Pavadinimas);
+				}
 			}
+			else {
+				if (maist.GetComponent<Info>() != null && maist.GetComponent<Info>().Pavadinimas != "NE" &&
+					!pav.Contains(maist.GetComponent<Info>().Pavadinimas))
+				{
+
+					text1.text += "<size=10px>" + "<align=\"center\">" + maist.GetComponent<Info>().Pavadinimas + "\n\n";
+					text1.text += "<align=\"justified\">" + maist.GetComponent<Info>().Notes + "\n\n";
+					text1.alignment = TextAlignmentOptions.Center;
+					pav.Add(maist.GetComponent<Info>().Pavadinimas);
+				}
+			}
+			sk++;
 		}
 		foreach (GameObject maist in maistas2)
 		{
-			if (maist.GetComponent<Info>() != null && maist.GetComponent<Info>().Pavadinimas != "NE" &&
-				!pav.Contains(maist.GetComponent<Info>().Pavadinimas))
+			if (sk % 2 == 0)
 			{
-				text.text += "<align=\"center\">" + maist.GetComponent<Info>().Pavadinimas + "\n\n";
-				text.text += "<align=\"justified\">" + maist.GetComponent<Info>().Notes + "\n\n";
-				pav.Add(maist.GetComponent<Info>().Pavadinimas);
+				if (maist.GetComponent<Info>() != null && maist.GetComponent<Info>().Pavadinimas != "NE" &&
+				!pav.Contains(maist.GetComponent<Info>().Pavadinimas))
+				{
+					text.text += "<align=\"center\">" + maist.GetComponent<Info>().Pavadinimas + "\n\n";
+					text.text += "<align=\"justified\">" + maist.GetComponent<Info>().Notes + "\n\n";
+					pav.Add(maist.GetComponent<Info>().Pavadinimas);
+				}
 			}
+			else {
+				if (maist.GetComponent<Info>() != null && maist.GetComponent<Info>().Pavadinimas != "NE" &&
+				!pav.Contains(maist.GetComponent<Info>().Pavadinimas))
+				{
+					text1.text += "<align=\"center\">" + maist.GetComponent<Info>().Pavadinimas + "\n\n";
+					text1.text += "<align=\"justified\">" + maist.GetComponent<Info>().Notes + "\n\n";
+					pav.Add(maist.GetComponent<Info>().Pavadinimas);
+				}
+			}
+			sk++;
 		}
 	}
 

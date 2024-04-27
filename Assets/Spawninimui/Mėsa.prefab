@@ -129,6 +129,7 @@ MonoBehaviour:
   EatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
   disableRespawn: 1
   mouth: {fileID: 0}
+  shouldPlaySound: 1
 --- !u!54 &8502461334085236205
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -170,7 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pavadinimas: "M\u0117sa"
   Notes: "Kiauliena\nAlyvuogi\u0173 aliejus\nSoja\n\u010Cesnakas\nMedus\nSezam\u0173
-    aliejus\nJuodieji pipirai\r\nImbieras"
+    aliejus\nJuodieji pipirai\nImbieras"
   Indas: 0
 --- !u!114 &3677398967616421617
 MonoBehaviour:

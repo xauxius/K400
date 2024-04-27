@@ -40,7 +40,7 @@ public class SpoonEating : MonoBehaviour
 				eatingSound = newAudio;
 				antsauksto = true;
 
-				eatable.Eat(false);			
+				eatable.Eat();			
 			}
 			Eatable2 eatable2 = collision.gameObject.GetComponent<Eatable2>();
 

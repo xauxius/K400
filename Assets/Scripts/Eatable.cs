@@ -22,6 +22,9 @@ public class Eatable : MonoBehaviour
 	float targetTime = 2.0f;
 	bool groja = false;
 
+
+	public bool shouldPlaySound = true;
+
 	void Start()
     {
         startPosition = transform.position.Copy();
@@ -57,7 +60,7 @@ public class Eatable : MonoBehaviour
       
 	}
 
-    public void Eat(bool shouldPlaySound = true)
+    public void Eat()
     {
         if (shouldPlaySound)
             SoundManager.instance.playEfektus(EatingSound, transform);

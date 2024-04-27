@@ -20,7 +20,7 @@ public class Spawn : MonoBehaviour
 		Vector3 start = new Vector3((float)1.817, (float)0.733334184, (float)0.088149786);
 		Vector3 v = new Vector3(270, 0, 0);
 		Vector3 startPosition = new Vector3((float)1.817, (float)0.9, (float)0.088149786);
-		Vector3 v3 = new Vector3((float)273.048126, (float)29.6944389, (float)240.372345);
+		Vector3 v3 = new Vector3((float)0, (float)0, (float)0);
 		Spawning(vardas, start, v, startPosition, v3);
 
 		string vardas1 = GetValues1.vardas1;
@@ -86,7 +86,7 @@ public class Spawn : MonoBehaviour
 				{
 					DestroyImmediate(Lekste1, true);
 				}
-				Instantiate(prefab, ms, startRotation);
+				Instantiate(prefab, ms, prefab.GetComponent<Transform>().rotation);
 				ms = new Vector3(ms.x, ms.y + 0.2F, ms.z);
 			}
 
@@ -106,7 +106,7 @@ public class Spawn : MonoBehaviour
 				{
 					DestroyImmediate(Lekste1, true);
 				}
-				Instantiate(prefab, ms, startRotation);
+				Instantiate(prefab, ms, prefab.GetComponent<Transform>().rotation);
 			
 		}
 		else if (name == "Sausainiai")
@@ -130,7 +130,25 @@ public class Spawn : MonoBehaviour
 				DestroyImmediate(Lekste1, true);
 			}
 
-			Instantiate(prefab, ms, startRotation);
+			Instantiate(prefab, ms, prefab.GetComponent<Transform>().rotation);
+		}
+		else if (name == "Spurga")
+		{
+
+			string path = "Assets/Spawninimui";
+			path += "/" + name + ".prefab";
+			Object prefab = AssetDatabase.LoadAssetAtPath(path, typeof(GameObject));
+
+			Quaternion startRotation = Quaternion.Euler(mr.x, mr.y, mr.z);
+			mouth = GameObject.FindGameObjectWithTag("Mouth");
+			prefab.GetComponent<Eatable3>().mouth = mouth.GetComponent<Mouth>();
+
+			if (prefab.GetComponent<Info>().Indas == true)
+			{
+				DestroyImmediate(Lekste1, true);
+			}
+
+			Instantiate(prefab, ms, prefab.GetComponent<Transform>().rotation);
 		}
 		else
 		{
@@ -145,7 +163,7 @@ public class Spawn : MonoBehaviour
 				DestroyImmediate(Lekste1, true);
 			}
 
-			Instantiate(prefab, ms, startRotation);
+			Instantiate(prefab, ms, prefab.GetComponent<Transform>().rotation);
 		}
 
 	}
