@@ -1,19 +1,22 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Eatable : MonoBehaviour
 {
-    // Managing mesh
-    public List<Mesh> meshes = new List<Mesh>();
-    public Mesh last;
-    private MeshFilter meshFilter;
-    private int meshIndex = 0;
+    // Managing display object
+    [SerializeField] private List<GameObject> prefabs = new List<GameObject>();
+    [SerializeField] private bool LeaveLast;
+    private int prefabIndex = 0;
+    private GameObject current;
 
     // Eating
-    public AudioClip eatingSound;
     public bool disableRespawn = true;
+    public AudioClip eatingSound;
     public Mouth mouth;
     private bool eating = false;
+    private HandsEating handsEating;
 
     // Starting transform
     private Vector3 startPosition;
@@ -21,10 +24,14 @@ public class Eatable : MonoBehaviour
 
     void Start()
     {
+        handsEating = GetComponent<HandsEating>();
+
         startPosition = transform.position.Copy();
         startRotation = transform.rotation.Copy();
 
-        meshFilter = GetComponent<MeshFilter>();
+        DisplayByIndex(0);
+
+        handsEating?.RestartInteractable();
     }
 
     void Update()
@@ -48,27 +55,39 @@ public class Eatable : MonoBehaviour
         if (shouldPlaySound)
             SoundManager.instance.playEfektus(eatingSound, transform);
             
-        if (++meshIndex < meshes.Count) {
-            meshFilter.mesh = meshes[meshIndex];
-        } else if (last != null) {
-            meshFilter.mesh = last;
-            enabled = false;
-        } else {
-            ResetFood();
+        if (++prefabIndex < prefabs.Count) {
+            DisplayByIndex(prefabIndex);
+        }  else {
+            ProcessEaten();
         }
     }
 
-    void ResetFood()
+    void DisplayByIndex(int index)
     {
-        if (meshes.Count > 0) 
+        if (current != null)
         {
-            meshIndex = 0;
-            meshFilter.mesh = meshes[0];
+            Destroy(current);
+        }
+
+        current = Instantiate(prefabs[index], transform);        
+        current.transform.parent = gameObject.transform;
+
+        handsEating?.FixColliders(current);
+    }
+
+    void ProcessEaten()
+    {
+        if (LeaveLast) {
+            enabled = false;
+            return;
         }
 
         if (!disableRespawn)
         {
-            Instantiate(gameObject, startPosition, startRotation);
+            transform.position = startPosition.Copy();
+            transform.rotation = startRotation.Copy();
+            prefabIndex = 0;
+            DisplayByIndex(0);
         }
         Destroy(gameObject);
     } 
