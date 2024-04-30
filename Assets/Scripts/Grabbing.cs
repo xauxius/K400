@@ -1,26 +1,31 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public abstract class Grabbing : MonoBehaviour
+public class Grabbing : MonoBehaviour
 {
+    [SerializeField] private Transform l_attach;
+    [SerializeField] private Transform r_attach;
     private XRGrabInteractable grabInteractable;
+    private bool transformRotated;
 
     void Awake() 
     {
         grabInteractable = GetComponent<XRGrabInteractable>();
+
+        grabInteractable.selectEntered.AddListener(FixPosition);
+    }
+
+    void FixPosition(SelectEnterEventArgs selectArgs)
+    {
+        Transform attach;
         
-        grabInteractable.activated.AddListener(HandleActivate);
-    }
-
-    public abstract void HandleActivate(ActivateEventArgs args);
-
-    public virtual void HandleRelease()
-    {
-
-    }
-
-    void OnDestroy()
-    {
-        grabInteractable.activated.RemoveAllListeners();
+        if (selectArgs.interactorObject.transform.gameObject.CompareTag("R")) {
+            attach = r_attach;
+        } else {
+            attach = l_attach;
+        }
+        
+        grabInteractable.attachTransform = attach;
     }
 }

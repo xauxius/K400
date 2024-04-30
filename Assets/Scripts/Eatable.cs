@@ -3,17 +3,21 @@ using UnityEngine;
 
 public class Eatable : MonoBehaviour
 {
-    // Managing mesh
-    public List<Mesh> meshes = new List<Mesh>();
-    public Mesh last;
+    // Managing display object
+    [SerializeField] private List<GameObject> prefabs = new List<GameObject>();
+    [SerializeField] private bool LeaveLast;
+    private int prefabIndex = 0;
+
     private MeshFilter meshFilter;
-    private int meshIndex = 0;
+    private MeshRenderer meshRenderer;
 
     // Eating
     public AudioClip EatingSound;
     public bool disableRespawn = true;
+    public AudioClip eatingSound;
     public Mouth mouth;
     private bool eating = false;
+    private HandsEating handsEating;
 
     // Starting transform
     private Vector3 startPosition;
@@ -27,10 +31,21 @@ public class Eatable : MonoBehaviour
 
 	void Start()
     {
+        if (mouth == null)
+            mouth = GameObject.FindGameObjectWithTag("Mouth").GetComponent<Mouth>();
+
+        handsEating = GetComponent<HandsEating>();
+
         startPosition = transform.position.Copy();
         startRotation = transform.rotation.Copy();
 
-        meshFilter = GetComponent<MeshFilter>();
+        meshFilter = gameObject.AddComponent<MeshFilter>();
+        meshRenderer = gameObject.AddComponent<MeshRenderer>();
+
+        DisplayByIndex(0);
+        transform.rotation = prefabs[0].transform.rotation;
+
+        handsEating?.RestartInteractable();
     }
 
     void Update()
@@ -63,30 +78,61 @@ public class Eatable : MonoBehaviour
     public void Eat()
     {
         if (shouldPlaySound)
-            SoundManager.instance.playEfektus(EatingSound, transform);
+            SoundManager.instance.playEfektus(eatingSound, transform);
             groja = true;
             
-        if (++meshIndex < meshes.Count) {
-            meshFilter.mesh = meshes[meshIndex];
-        } else if (last != null) {
-            meshFilter.mesh = last;
-            enabled = false;
-        } else {
-            ResetFood();
+        if (++prefabIndex < prefabs.Count) {
+            DisplayByIndex(prefabIndex);
+        }  else {
+            ProcessEaten();
         }
     }
 
-    void ResetFood()
+    void DisplayByIndex(int index)
     {
-        if (meshes.Count > 0) 
+        var current = prefabs[index];
+        CopyDisplayComponents(current);
+        CopyCollider(current);
+
+        handsEating?.FixColliders();
+    }
+
+    void CopyDisplayComponents(GameObject copyFrom)
+    {
+        meshFilter.mesh = copyFrom.GetComponent<MeshFilter>().sharedMesh;
+        meshRenderer.materials = copyFrom.GetComponent<MeshRenderer>().sharedMaterials;
+        transform.localScale = copyFrom.transform.localScale; 
+    }
+
+    void CopyCollider(GameObject copyFrom)
+    {
+        Destroy(GetComponent<Collider>());
+
+        var collider = copyFrom.GetComponent<Collider>();
+        if (collider is BoxCollider boxCollider)
         {
-            meshIndex = 0;
-            meshFilter.mesh = meshes[0];
+            var newBoxCollider = gameObject.AddComponent<BoxCollider>();
+            newBoxCollider.center = boxCollider.center;
+            newBoxCollider.size = boxCollider.size;
+        } else {
+            var newCollider = gameObject.AddComponent<MeshCollider>();
+            newCollider.convex = true;
+        }
+    }
+
+    void ProcessEaten()
+    {
+        if (LeaveLast) {
+            enabled = false;
+            return;
         }
 
         if (!disableRespawn)
         {
-            Instantiate(gameObject, startPosition, startRotation);
+            transform.position = startPosition.Copy();
+            transform.rotation = startRotation.Copy();
+            prefabIndex = 0;
+            DisplayByIndex(0);
         }
 		SoundManager.instance.destroyEffects2();
 		Destroy(gameObject);

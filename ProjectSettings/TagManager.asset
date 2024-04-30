@@ -13,6 +13,7 @@ TagManager:
   - Mouth
   - LiquidParticle
   - DrinkPos
+  - R
   layers:
   - Default
   - TransparentFX

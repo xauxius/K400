@@ -11,6 +11,6 @@ public class Info : MonoBehaviour
 	public string Notes = "";
 
 	[SerializeField]
-	public bool Indas;
+	public bool SpawnPlate = true;
 
 }
