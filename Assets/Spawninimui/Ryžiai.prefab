@@ -1957,6 +1957,7 @@ GameObject:
   - component: {fileID: 7378906926233906452}
   - component: {fileID: 6239240530119210085}
   - component: {fileID: 6262194497165959346}
+  - component: {fileID: -4734378121741527126}
   m_Layer: 0
   m_Name: "Ry\u017Eiai"
   m_TagString: Spoonable
@@ -1972,7 +1973,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4351461034322427134}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.66444004, y: -0.026371265, z: -0.070319764, w: 0.74355847}
+  m_LocalRotation: {x: -0.6644431, y: -0.026372697, z: -0.0703186, w: 0.74355584}
   m_LocalPosition: {x: -0.8417813, y: 0.8159482, z: 0.08623788}
   m_LocalScale: {x: 0.49999997, y: 0.5000001, z: 0.5000001}
   m_ConstrainProportionsScale: 0
@@ -2014,7 +2015,7 @@ Transform:
   - {fileID: 9180924728983605709}
   - {fileID: 2925205402140508322}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -82.662, y: 25.123, z: -32.98}
 --- !u!54 &5305493142724782625
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2054,9 +2055,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce89e32165c10a647a74cc3ce4fe04a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LeaveLast: 0
   EatingSound: {fileID: 8300000, guid: 229f8d171e2f5e54b97565e0ea793436, type: 3}
   disableRespawn: 1
   mouth: {fileID: 0}
+  shouldPlaySound: 0
+  DisplayCount: 4
 --- !u!114 &6239240530119210085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2071,7 +2075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pavadinimas: "Ry\u017Eiai"
   Notes: "Ry\u017Eiai\n"
-  Indas: 0
+  SpawnPlate: 1
 --- !u!65 &6262194497165959346
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2093,6 +2097,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25359714, y: 0.23807305, z: 0.032965947}
   m_Center: {x: -0.007004265, y: -0.025681887, z: -0.009194968}
+--- !u!114 &-4734378121741527126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4351461034322427134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b2cf9e6b326df44ba7752d796edb8d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpoonedMaterial: {fileID: -4626272938536280251, guid: 994b25fdd5753ff4286f72ceaa45eed1, type: 3}
 --- !u!1 &4360042377574804989
 GameObject:
   m_ObjectHideFlags: 0

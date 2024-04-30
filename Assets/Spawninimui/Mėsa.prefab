@@ -48,12 +48,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1aa6d9be4f78f438d80a7714de2e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6927029236721577081, guid: f8ca01f7ff046f44eb14f0c7b416441c, type: 3}
   LeaveLast: 0
+  EatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
   disableRespawn: 1
-  eatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
   mouth: {fileID: 0}
+  shouldPlaySound: 1
+  meshes: []
 --- !u!114 &1296532194797971661
 MonoBehaviour:
   m_ObjectHideFlags: 0

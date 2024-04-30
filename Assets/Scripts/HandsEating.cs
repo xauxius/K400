@@ -5,12 +5,12 @@ public class HandsEating : Grabbing
 {
 	[SerializeField] private bool debugMode = false;
 	
-    private Eatable food;
+    private EatableBase food;
 	private XRGrabInteractable xrGrab;
 
 	void Awake()
     {
-		food = GetComponent<Eatable>(); 
+		food = GetComponent<EatableBase>(); 
 
 		xrGrab = GetComponent<XRGrabInteractable>();
 		if (debugMode)

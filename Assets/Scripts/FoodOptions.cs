@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -12,7 +13,11 @@ public class FoodOptions : MonoBehaviour
     {
         foreach (var food in FoodPrefabs)
         {
-            foodsDict.Add(food.GetComponent<Info>().Pavadinimas, food);
+            var info = food.GetComponent<Info>();
+            if (info != null)
+                foodsDict.Add(info.Pavadinimas, food);
+            else
+                Debug.Log("Nerastas info, kazkas gali but blogai.");
         }
     }
 

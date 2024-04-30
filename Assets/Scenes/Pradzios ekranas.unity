@@ -1116,7 +1116,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "M\u0117sa"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1327,7 +1327,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ry\u017Eiai"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2352,32 +2352,11 @@ MonoBehaviour:
   m_Value: 0
   m_MultiSelect: 0
   m_Options:
-    m_Options:
-    - m_Text: "Ry\u017Eiai"
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Kruasanas
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Sriuba
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: "M\u0117sa"
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Sausainiai
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Spurga
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: "De\u0161rainis"
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 373644282}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GetValues3, Assembly-CSharp
         m_MethodName: GetValue
         m_Mode: 1
@@ -2437,10 +2416,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 373644276}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d87461244cdb4b45b2be1a6b0345569, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f1297ff5519d3a48b2e1228567124dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dropdown: {fileID: 373644279}
+  foodOptions: {fileID: 2013336964}
 --- !u!114 &385383310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2788,32 +2768,11 @@ MonoBehaviour:
   m_Value: 0
   m_MultiSelect: 0
   m_Options:
-    m_Options:
-    - m_Text: Sriuba
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Kruasanas
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: "M\u0117sa"
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: "Ry\u017Eiai"
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Sausainiai
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Spurga
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: "De\u0161rainis"
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 416792468}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GetValues2, Assembly-CSharp
         m_MethodName: GetValue
         m_Mode: 1
@@ -2873,10 +2832,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 416792462}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a02518f0957637849b0ea71b3912751a, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f1297ff5519d3a48b2e1228567124dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dropdown: {fileID: 416792465}
+  foodOptions: {fileID: 2013336964}
 --- !u!1 &472346875
 GameObject:
   m_ObjectHideFlags: 0
@@ -3480,32 +3440,11 @@ MonoBehaviour:
   m_Value: 0
   m_MultiSelect: 0
   m_Options:
-    m_Options:
-    - m_Text: "M\u0117sa"
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Kruasanas
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Sriuba
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: "Ry\u017Eiai"
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Sausainiai
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Spurga
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: "De\u0161rainis"
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 623373549}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GetValues1, Assembly-CSharp
         m_MethodName: GetValue
         m_Mode: 1
@@ -3565,10 +3504,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 623373543}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1f8b3eafa2a7c84a95f213ac961158b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f1297ff5519d3a48b2e1228567124dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dropdown: {fileID: 623373546}
+  foodOptions: {fileID: 2013336964}
 --- !u!1 &628392418
 GameObject:
   m_ObjectHideFlags: 0
@@ -3662,7 +3602,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Kruasanas
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3796,6 +3736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropdown: {fileID: 665487168}
+  foodOptions: {fileID: 2013336964}
 --- !u!114 &665487168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3846,28 +3787,7 @@ MonoBehaviour:
   m_Value: 0
   m_MultiSelect: 0
   m_Options:
-    m_Options:
-    - m_Text: Kruasanas
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Sriuba
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: "M\u0117sa"
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: "Ry\u017Eiai"
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Sausainiai
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Spurga
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: "De\u0161rainis"
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -4103,32 +4023,11 @@ MonoBehaviour:
   m_Value: 0
   m_MultiSelect: 0
   m_Options:
-    m_Options:
-    - m_Text: Sausainiai
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Kruasanas
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Sriuba
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: "M\u0117sa"
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: "Ry\u017Eiai"
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Spurga
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: "De\u0161rainis"
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 684325196}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GetValues4, Assembly-CSharp
         m_MethodName: GetValue
         m_Mode: 1
@@ -4188,10 +4087,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 684325190}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f275b027eb490445a86527be99fd697, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f1297ff5519d3a48b2e1228567124dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dropdown: {fileID: 684325193}
+  foodOptions: {fileID: 2013336964}
 --- !u!1 &686669317
 GameObject:
   m_ObjectHideFlags: 0
@@ -6424,7 +6324,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sausainiai
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6635,7 +6535,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sriuba
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8612,6 +8512,7 @@ GameObject:
   - component: {fileID: 2013336961}
   - component: {fileID: 2013336960}
   - component: {fileID: 2013336959}
+  - component: {fileID: 2013336964}
   m_Layer: 5
   m_Name: Canvas (1)
   m_TagString: Untagged
@@ -8651,6 +8552,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 529b321da1c4d554fb48f4a7bab83b8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdownPicks:
+  - {fileID: 665487167}
+  - {fileID: 623373549}
+  - {fileID: 416792468}
+  - {fileID: 373644282}
+  - {fileID: 684325196}
 --- !u!114 &2013336960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8733,6 +8640,27 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &2013336964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013336957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5796c29ee8ec134a8801847c6bc24be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FoodPrefabs:
+  - {fileID: 9145976129183846092, guid: bd1a202db50ee4048a9cbc5bc9948f59, type: 3}
+  - {fileID: 4487476626177567874, guid: 00f7447fcb7459748a462db559f7fe15, type: 3}
+  - {fileID: 1224155753480946419, guid: 2935e51c38196f34ba6068b1e900ddfb, type: 3}
+  - {fileID: 5290441094360519660, guid: 7daf8c48659145f459dfc973d9fd1f4c, type: 3}
+  - {fileID: 37456277406048306, guid: f09a6686b25f2f7418f08bb40da1d844, type: 3}
+  - {fileID: 4351461034322427134, guid: 8a5f82f1941896d4ebcda3ce64c52dd1, type: 3}
+  - {fileID: 3951183799761019322, guid: f17fc1f4256371547a2db3e55ab1c84f, type: 3}
+  - {fileID: 3086027283208824996, guid: 3ea997e89bf67234483c916a07cd3bab, type: 3}
 --- !u!1 &2016915503
 GameObject:
   m_ObjectHideFlags: 0

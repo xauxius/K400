@@ -227,14 +227,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1aa6d9be4f78f438d80a7714de2e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 5698246181457512586, guid: 2d0fe1cdf61fe6840869e24c6f8730fe, type: 3}
-  - {fileID: 6461243457514675434, guid: 8d4fe266102f04e49848d8737c53671b, type: 3}
-  - {fileID: 1694280757960354272, guid: d8c9f16177498f545abee8d1f2268823, type: 3}
   LeaveLast: 0
+  EatingSound: {fileID: 8300000, guid: 229f8d171e2f5e54b97565e0ea793436, type: 3}
   disableRespawn: 1
-  eatingSound: {fileID: 8300000, guid: 229f8d171e2f5e54b97565e0ea793436, type: 3}
   mouth: {fileID: 0}
+  shouldPlaySound: 1
+  meshes: []
 --- !u!114 &7126754015385791660
 MonoBehaviour:
   m_ObjectHideFlags: 0

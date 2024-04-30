@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8211763610487083158}
-  - component: {fileID: 6931819596170425622}
   - component: {fileID: 412126683781091400}
   - component: {fileID: 8887325586268989745}
   - component: {fileID: 6370686653530868631}
   - component: {fileID: -55914396650449459}
+  - component: {fileID: -6111188409901938749}
   m_Layer: 0
   m_Name: Burger
   m_TagString: Untagged
@@ -36,27 +36,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6931819596170425622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145976129183846092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c1aa6d9be4f78f438d80a7714de2e20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6670414879422738141, guid: 9d9ff542d3cdc8f47aa0ebf0e104d48c, type: 3}
-  - {fileID: 7657508654489477789, guid: 3d0532f64d81a6f4083ebcd6cd2c8cc5, type: 3}
-  - {fileID: 8204556626167256348, guid: c638801eb86cb9940b57c9da3f12725c, type: 3}
-  - {fileID: 6499241798964489545, guid: 53e76993f5d849846a5e1aae001a0c07, type: 3}
-  LeaveLast: 0
-  disableRespawn: 1
-  eatingSound: {fileID: 0}
-  mouth: {fileID: 0}
 --- !u!54 &412126683781091400
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -266,3 +245,25 @@ MonoBehaviour:
   Pavadinimas: "M\u0117sainis"
   Notes: 
   SpawnPlate: 1
+--- !u!114 &-6111188409901938749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9145976129183846092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5839769ac65b2574f93a35ae2042f31b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeaveLast: 0
+  EatingSound: {fileID: 8300000, guid: 229f8d171e2f5e54b97565e0ea793436, type: 3}
+  disableRespawn: 1
+  mouth: {fileID: 0}
+  shouldPlaySound: 1
+  prefabs:
+  - {fileID: 6670414879422738141, guid: 9d9ff542d3cdc8f47aa0ebf0e104d48c, type: 3}
+  - {fileID: 7657508654489477789, guid: 3d0532f64d81a6f4083ebcd6cd2c8cc5, type: 3}
+  - {fileID: 8204556626167256348, guid: c638801eb86cb9940b57c9da3f12725c, type: 3}
+  - {fileID: 6499241798964489545, guid: 53e76993f5d849846a5e1aae001a0c07, type: 3}

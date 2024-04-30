@@ -26,40 +26,25 @@ public class SpoonEating : MonoBehaviour
 
 	void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Spoonable"))
+		Spoonable spoonable = collision.gameObject.GetComponent<Spoonable>();
+
+        if (spoonable != null)
         {
-			Eatable eatable = collision.gameObject.GetComponent<Eatable>();
+			EatableBase eatable = collision.gameObject.GetComponent<EatableBase>();
 		
 			if (eatable is not null && antsauksto == false && eatable.enabled == true)
             {
-				
-				Material newMat = eatable.GetComponent<MeshRenderer>().material;
 				transform.GetChild(0).gameObject.SetActive(true);
-				transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material = newMat;
+				transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material = spoonable.SpoonedMaterial;
 				AudioClip newAudio = eatable.EatingSound;
 				eatingSound = newAudio;
 				antsauksto = true;
 
 				eatable.Eat();			
 			}
-			Eatable2 eatable2 = collision.gameObject.GetComponent<Eatable2>();
-
-			if (eatable is null && eatable2 is not null && antsauksto == false && eatable2.enabled == true)
-			{
-
-				Material newMat = collision.gameObject.GetComponentInChildren<MeshRenderer>().material;
-				transform.GetChild(0).gameObject.SetActive(true);
-				transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material = newMat;
-
-				AudioClip newAudio = eatable2.EatingSound;
-				Debug.Log(newAudio.name);
-				eatingSound = newAudio;
-				antsauksto = true;
-
-				eatable2.Eat(false);
-			}
         }
     }
+
 	void Update()
 	{
 		

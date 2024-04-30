@@ -51,7 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pavadinimas: Sausainiai
   Notes: Sausainiai X4
-  Indas: 0
+  SpawnPlate: 1
 --- !u!1 &4468528584858476726
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,6 +181,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 867f93dca40fa83428287538225691d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  l_attach: {fileID: 0}
+  r_attach: {fileID: 0}
+  debugMode: 0
 --- !u!114 &1531528193922209739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,15 +348,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1aa6d9be4f78f438d80a7714de2e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LeaveLast: 0
+  EatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
+  disableRespawn: 1
+  eatingSound: {fileID: 0}
+  mouth: {fileID: 0}
+  shouldPlaySound: 1
   meshes:
   - {fileID: -5151454857001626291, guid: 6f3096dd3369dbd448369438487e69c4, type: 3}
   - {fileID: -5151454857001626291, guid: 8392d79cb979d7a429cd3e4c806483bc, type: 3}
   - {fileID: -5151454857001626291, guid: 809e8e551c741ad48baf16cda04359ac, type: 3}
-  last: {fileID: 0}
-  EatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
-  disableRespawn: 1
-  mouth: {fileID: 0}
-  shouldPlaySound: 1
 --- !u!64 &1475061467530277149
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -392,6 +396,8 @@ GameObject:
   - component: {fileID: 8183283111355585272}
   - component: {fileID: 8051622805667666066}
   - component: {fileID: 4234483525672368038}
+  - component: {fileID: 7817076524424078932}
+  - component: {fileID: 4687265583119243204}
   m_Layer: 0
   m_Name: Sausainis
   m_TagString: Food
@@ -505,6 +511,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 867f93dca40fa83428287538225691d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  l_attach: {fileID: 0}
+  r_attach: {fileID: 0}
+  debugMode: 0
 --- !u!114 &8183283111355585272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -669,15 +678,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1aa6d9be4f78f438d80a7714de2e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LeaveLast: 0
+  EatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
+  disableRespawn: 1
+  eatingSound: {fileID: 0}
+  mouth: {fileID: 0}
+  shouldPlaySound: 1
   meshes:
   - {fileID: -5151454857001626291, guid: 6f3096dd3369dbd448369438487e69c4, type: 3}
   - {fileID: -5151454857001626291, guid: 8392d79cb979d7a429cd3e4c806483bc, type: 3}
   - {fileID: -5151454857001626291, guid: 809e8e551c741ad48baf16cda04359ac, type: 3}
-  last: {fileID: 0}
-  EatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
-  disableRespawn: 1
-  mouth: {fileID: 0}
-  shouldPlaySound: 1
 --- !u!64 &4234483525672368038
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -700,6 +710,39 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5151454857001626291, guid: 6f3096dd3369dbd448369438487e69c4, type: 3}
+--- !u!114 &7817076524424078932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5754611368685591855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a48f62e86d8995745aa462a6644dfd89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnOffsets:
+  - {x: 0, y: 0.02, z: 0}
+  - {x: 0.05, y: 0, z: 0.05}
+  - {x: 0.05, y: 0, z: -0.05}
+  - {x: -0.05, y: 0, z: 0.05}
+  - {x: -0.05, y: 0, z: -0.05}
+--- !u!114 &4687265583119243204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5754611368685591855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9caae2ed98929374581525c391bcf1b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pavadinimas: Sausainis
+  Notes: 
+  SpawnPlate: 1
 --- !u!1 &6136698664966138131
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,6 +872,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 867f93dca40fa83428287538225691d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  l_attach: {fileID: 0}
+  r_attach: {fileID: 0}
+  debugMode: 0
 --- !u!114 &5682524805041348959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -993,15 +1039,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1aa6d9be4f78f438d80a7714de2e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LeaveLast: 0
+  EatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
+  disableRespawn: 1
+  eatingSound: {fileID: 0}
+  mouth: {fileID: 0}
+  shouldPlaySound: 1
   meshes:
   - {fileID: -5151454857001626291, guid: 6f3096dd3369dbd448369438487e69c4, type: 3}
   - {fileID: -5151454857001626291, guid: 8392d79cb979d7a429cd3e4c806483bc, type: 3}
   - {fileID: -5151454857001626291, guid: 809e8e551c741ad48baf16cda04359ac, type: 3}
-  last: {fileID: 0}
-  EatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
-  disableRespawn: 1
-  mouth: {fileID: 0}
-  shouldPlaySound: 1
 --- !u!64 &4491956437014635288
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1153,6 +1200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 867f93dca40fa83428287538225691d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  l_attach: {fileID: 0}
+  r_attach: {fileID: 0}
+  debugMode: 0
 --- !u!114 &8871692364139241210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1317,15 +1367,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1aa6d9be4f78f438d80a7714de2e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LeaveLast: 0
+  EatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
+  disableRespawn: 1
+  eatingSound: {fileID: 0}
+  mouth: {fileID: 0}
+  shouldPlaySound: 1
   meshes:
   - {fileID: -5151454857001626291, guid: 6f3096dd3369dbd448369438487e69c4, type: 3}
   - {fileID: -5151454857001626291, guid: 8392d79cb979d7a429cd3e4c806483bc, type: 3}
   - {fileID: -5151454857001626291, guid: 809e8e551c741ad48baf16cda04359ac, type: 3}
-  last: {fileID: 0}
-  EatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
-  disableRespawn: 1
-  mouth: {fileID: 0}
-  shouldPlaySound: 1
 --- !u!64 &3328220255697930946
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1477,6 +1528,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 867f93dca40fa83428287538225691d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  l_attach: {fileID: 0}
+  r_attach: {fileID: 0}
+  debugMode: 0
 --- !u!114 &3356381846840196750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1641,15 +1695,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1aa6d9be4f78f438d80a7714de2e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LeaveLast: 0
+  EatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
+  disableRespawn: 1
+  eatingSound: {fileID: 0}
+  mouth: {fileID: 0}
+  shouldPlaySound: 1
   meshes:
   - {fileID: -5151454857001626291, guid: 6f3096dd3369dbd448369438487e69c4, type: 3}
   - {fileID: -5151454857001626291, guid: 8392d79cb979d7a429cd3e4c806483bc, type: 3}
   - {fileID: -5151454857001626291, guid: 809e8e551c741ad48baf16cda04359ac, type: 3}
-  last: {fileID: 0}
-  EatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
-  disableRespawn: 1
-  mouth: {fileID: 0}
-  shouldPlaySound: 1
 --- !u!64 &1936904796380661690
 MeshCollider:
   m_ObjectHideFlags: 0

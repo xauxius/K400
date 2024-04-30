@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-	[SerializeField] private int optionsCount = 5;
 	[SerializeField] private List<Transform> spawnPoints;
 	[SerializeField] private GameObject platePrefab;
 
@@ -13,8 +12,13 @@ public class Spawn : MonoBehaviour
 	{
 		mouth = GameObject.FindGameObjectWithTag("Mouth").GetComponent<Mouth>();
 
-		for (int i = 0; i < optionsCount; i++)
+		for (int i = 0; i < spawnPoints.Count; i++)
 		{
+			if (Selections.Selected.Count == 0)
+			{
+				Debug.Log("Pasirinkimai nerasti");
+				return;
+			}
 			var foodPrefab = Selections.Selected[i];
 			var spawnPoint = spawnPoints[i]; 
 
@@ -24,7 +28,7 @@ public class Spawn : MonoBehaviour
 
 	void Spawning(GameObject foodPrefab, Transform spawnTransform) 
 	{
-		foodPrefab.GetComponent<Eatable>().mouth = mouth;
+		foodPrefab.GetComponent<EatableBase>().mouth = mouth;
 
 		if (foodPrefab.GetComponent<Info>().SpawnPlate)
 		{
