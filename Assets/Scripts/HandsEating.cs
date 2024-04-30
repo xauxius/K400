@@ -1,8 +1,4 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Rendering.HighDefinition;
-using UnityEngine.UIElements;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class HandsEating : Grabbing
@@ -29,9 +25,9 @@ public class HandsEating : Grabbing
         xrGrab.interactionManager.RegisterInteractable(xrGrab.GetComponent<IXRInteractable>());
     }
 
-	public void FixColliders(GameObject current)
+	public void FixColliders()
 	{
-		var colliders = current.GetComponents<Collider>();
+		var colliders = GetComponents<Collider>();
         foreach (var collider in colliders)
         {
             xrGrab.colliders.Add(collider);
