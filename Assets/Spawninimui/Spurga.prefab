@@ -336,16 +336,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdce93021f6067b419d39ae4c8996eb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LeaveLast: 0
+  EatingSound: {fileID: 8300000, guid: 229f8d171e2f5e54b97565e0ea793436, type: 3}
+  disableRespawn: 1
+  mouth: {fileID: 0}
+  shouldPlaySound: 1
   meshes:
   - {fileID: -210601374639950465, guid: cdd333d430c912448ae3c1481dbe2ba7, type: 3}
   - {fileID: -210601374639950465, guid: 45bf1d3b78994bd4b833a848560fb7da, type: 3}
   - {fileID: -210601374639950465, guid: 13392d3906c345543a5d5de4b0bb3870, type: 3}
   - {fileID: -210601374639950465, guid: 347b5949ba770f44d95b1975dddc16ad, type: 3}
-  last: {fileID: 0}
-  EatingSound: {fileID: 8300000, guid: 229f8d171e2f5e54b97565e0ea793436, type: 3}
-  disableRespawn: 1
-  mouth: {fileID: 0}
-  shouldPlaySound: 1
 --- !u!54 &8510717578147365546
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -538,8 +538,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pavadinimas: Spurga
-  Notes: Spurga
-  Indas: 0
+  Notes: "Te\u0161la\n\u0160okoladas\nPabarstai"
+  SpawnPlate: 1
 --- !u!1 &5335061971990054677
 GameObject:
   m_ObjectHideFlags: 0
