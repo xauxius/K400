@@ -359,6 +359,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9caae2ed98929374581525c391bcf1b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pavadinimas: Sausainis
+  Pavadinimas: Sausainiai
   Notes: "Juodas \u0161okoladas\nKondensuotas pienas\nCukrus\nKiau\u0161iniai\nMiltai"
   SpawnPlate: 1
