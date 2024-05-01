@@ -8,6 +8,7 @@ public class DropdownPick : MonoBehaviour
 {
 	[SerializeField] private TMP_Dropdown dropdown;
 	[SerializeField] private FoodOptions foodOptions;
+	[SerializeField] private int selectedIndex;
 
 	public void Start()
 	{
@@ -15,6 +16,8 @@ public class DropdownPick : MonoBehaviour
 		{
 			dropdown.options.Add(new TMP_Dropdown.OptionData(option));
 		}
+
+		dropdown.value = selectedIndex;
 	}
 
 	public GameObject GetSelectedPrefab()

@@ -2421,6 +2421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropdown: {fileID: 373644279}
   foodOptions: {fileID: 2013336964}
+  selectedIndex: 3
 --- !u!114 &385383310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2837,6 +2838,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropdown: {fileID: 416792465}
   foodOptions: {fileID: 2013336964}
+  selectedIndex: 2
 --- !u!1 &472346875
 GameObject:
   m_ObjectHideFlags: 0
@@ -3509,6 +3511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropdown: {fileID: 623373546}
   foodOptions: {fileID: 2013336964}
+  selectedIndex: 1
 --- !u!1 &628392418
 GameObject:
   m_ObjectHideFlags: 0
@@ -3737,6 +3740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropdown: {fileID: 665487168}
   foodOptions: {fileID: 2013336964}
+  selectedIndex: 0
 --- !u!114 &665487168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4092,6 +4096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropdown: {fileID: 684325193}
   foodOptions: {fileID: 2013336964}
+  selectedIndex: 4
 --- !u!1 &686669317
 GameObject:
   m_ObjectHideFlags: 0
