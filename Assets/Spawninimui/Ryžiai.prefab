@@ -2074,7 +2074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pavadinimas: "Ry\u017Eiai"
-  Notes: "Ry\u017Eiai\n"
+  Notes: "Balti ry\u017Eiai\nDruska"
   SpawnPlate: 1
 --- !u!65 &6262194497165959346
 BoxCollider:

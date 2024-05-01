@@ -282,6 +282,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 867f93dca40fa83428287538225691d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  l_attach: {fileID: 0}
+  r_attach: {fileID: 0}
+  debugMode: 0
 --- !u!114 &5435157599014492196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,16 +297,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1aa6d9be4f78f438d80a7714de2e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LeaveLast: 0
+  EatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
+  disableRespawn: 1
+  mouth: {fileID: 0}
+  shouldPlaySound: 1
   meshes:
   - {fileID: 4493585093827132993, guid: 46eedb1913c93d7428c91ae8825d6bf0, type: 3}
   - {fileID: 4493585093827132993, guid: b79be2983f3e50d48866932c6770dbc5, type: 3}
   - {fileID: 4493585093827132993, guid: d95f74fb6caf24e49b4544db5c84f2eb, type: 3}
   - {fileID: 4493585093827132993, guid: a9e2fd2074c52784fb81871d8a54b78f, type: 3}
-  last: {fileID: 0}
-  EatingSound: {fileID: 8300000, guid: 6ae3c50ed5776d248b4b29854a94fafa, type: 3}
-  disableRespawn: 1
-  mouth: {fileID: 0}
-  shouldPlaySound: 1
 --- !u!64 &8280428569551835889
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -339,5 +342,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pavadinimas: "De\u0161rainis"
-  Notes: "De\u0161rainis"
-  Indas: 0
+  Notes: "Duona\nDe\u0161rel\u0117"
+  SpawnPlate: 1
