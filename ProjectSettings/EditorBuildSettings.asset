@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Kambarys.unity
     guid: 973a3c1dab792f44895d2fad672a9006
   - enabled: 1
-    path: Assets/Scenes/Jura.unity
-    guid: 4415bae31083c254c8f04f5a5aa26bd5
-  - enabled: 1
     path: Assets/Scenes/Jura 360.unity
     guid: 347c3a911e2c2904a84a58150bceb73c
   m_configObjects:

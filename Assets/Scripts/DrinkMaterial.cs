@@ -16,9 +16,9 @@ public class DrinkMaterial : MonoBehaviour
 	}
 	void Spawning(string name)
 	{
-		string path = "Assets/Materials";
-		path += "/" + name + ".mat";
-		Material newMat = (Material)AssetDatabase.LoadAssetAtPath(path, typeof(Material));
+		string path = "Materials";
+		path += "/" + name;
+		Material newMat = Resources.Load<Material>(path);
 		GetComponent<MeshRenderer>().material = newMat;
 		
 	}
