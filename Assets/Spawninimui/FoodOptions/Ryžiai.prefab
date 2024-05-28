@@ -1953,11 +1953,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2810921383281957778}
-  - component: {fileID: 5305493142724782625}
   - component: {fileID: 7378906926233906452}
   - component: {fileID: 6239240530119210085}
   - component: {fileID: 6262194497165959346}
   - component: {fileID: -4734378121741527126}
+  - component: {fileID: 2347799524070660020}
   m_Layer: 0
   m_Name: "Ry\u017Eiai"
   m_TagString: Spoonable
@@ -1978,6 +1978,8 @@ Transform:
   m_LocalScale: {x: 0.49999997, y: 0.5000001, z: 0.5000001}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 9180924728983605709}
+  - {fileID: 2925205402140508322}
   - {fileID: 4521430510901755981}
   - {fileID: 3995958058341314929}
   - {fileID: 4465752279623918198}
@@ -2012,37 +2014,8 @@ Transform:
   - {fileID: 2910189827534186632}
   - {fileID: 8158743286705490149}
   - {fileID: 7852633917694949742}
-  - {fileID: 9180924728983605709}
-  - {fileID: 2925205402140508322}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -82.662, y: 25.123, z: -32.98}
---- !u!54 &5305493142724782625
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4351461034322427134}
-  serializedVersion: 4
-  m_Mass: 0.1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &7378906926233906452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2060,7 +2033,7 @@ MonoBehaviour:
   disableRespawn: 1
   mouth: {fileID: 0}
   shouldPlaySound: 0
-  DisplayCount: 4
+  removeAmount: 6
 --- !u!114 &6239240530119210085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2110,6 +2083,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpoonedMaterial: {fileID: -4626272938536280251, guid: 994b25fdd5753ff4286f72ceaa45eed1, type: 3}
+--- !u!114 &2347799524070660020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4351461034322427134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3bfb405089b05340ac023747efe537f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4360042377574804989
 GameObject:
   m_ObjectHideFlags: 0
