@@ -10,7 +10,10 @@ public abstract class GeneralStabbing: MonoBehaviour
     
     public StabManager stabManager;
 
-    void Start()
+    public bool raisedfork = false;
+	public bool raisedknive = false;
+
+	void Start()
     {
         rayCasters = gameObject.GetComponentsInChildren<RayCaster>().ToList();
 
@@ -19,25 +22,30 @@ public abstract class GeneralStabbing: MonoBehaviour
 
     private void Update()
     {
-        foreach (var rayCaster in rayCasters)
+        if (raisedfork || raisedknive)
         {
-            RaycastHit hit;
-            var didHit = Physics.Raycast(rayCaster.GetRay(), out hit, rayCaster.RayDistance);
-
-            if (didHit)
+            foreach (var rayCaster in rayCasters)
             {
-                var stabbed = hit.collider.gameObject;
+                RaycastHit hit;
+                var didHit = Physics.Raycast(rayCaster.GetRay(), out hit, rayCaster.RayDistance);
 
-                if (stabManager.SuitableForStab(stabbed))
+                if (didHit)
                 {
-                    stabManager.ProcessRayStabbing(hit);
-                } else if (hit.distance <= 0.005) {
-                    Cut();
+                    var stabbed = hit.collider.gameObject;
+
+                    if (stabManager.SuitableForStab(stabbed))
+                    {
+                        stabManager.ProcessRayStabbing(hit);
+                    }
+                    else if (hit.distance <= 0.005)
+                    {
+                        Cut();
+                    }
                 }
             }
-        }
-
+       
         UpdateExtra();
+        }
     }
 
     public void CleanubStabConnections()

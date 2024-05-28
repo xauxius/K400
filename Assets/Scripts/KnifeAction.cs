@@ -56,4 +56,13 @@ public class KnifeAction: GeneralStabbing
         Stabable stabable = sliced.AddComponent<Stabable>();
         stabable.Copy(beforeSlice.GetComponent<Stabable>());
     }
+	public void activateknive()
+	{
+		raisedknive = true;
+
+	}
+	public void deactivateknive()
+	{
+		raisedknive = false;
+	}
 }

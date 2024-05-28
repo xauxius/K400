@@ -27,4 +27,13 @@ public class ForkAction: GeneralStabbing
     {
         // FreeAxis(); // Kolkas neveikia kaip turėtų, kolkas tiks be šito... :(
     }
+    public void activatefork()
+    {
+        raisedfork = true;
+
+	}
+	public void deactivatefork()
+	{
+		raisedfork = false;
+	}
 }
