@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4883432129258460009}
   m_Layer: 0
   m_Name: Cereal
-  m_TagString: Untagged
+  m_TagString: Spoonable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

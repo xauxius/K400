@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "De\u0161rel\u0117"
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2a395fb28d0bcf24ab13a733947f7486, type: 3}
+      propertyPath: m_TagString
+      value: Food
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

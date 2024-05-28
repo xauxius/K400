@@ -36,19 +36,26 @@ public class Nesimas : MonoBehaviour
 		GameObject[] maistas = GameObject.FindGameObjectsWithTag("Food");
 		foreach (GameObject maistai in maistas)
 		{
-			if (transform.GetChild(0).gameObject == maistai)
+			for (int i=0;i<transform.childCount;i++)
 			{
+				if (transform.GetChild(i).gameObject == maistai)
+				{
 				maistai.GetComponent<Rigidbody>().isKinematic = false;
 				maistai.transform.parent = null;
+				}
 			}
+			
 		}
 		GameObject[] maistas1 = GameObject.FindGameObjectsWithTag("Spoonable");
 		foreach (GameObject maistai in maistas1)
 		{
-			if (transform.GetChild(0).gameObject == maistai)
+			for (int i = 0; i < transform.childCount; i++)
 			{
-				maistai.GetComponent<Rigidbody>().isKinematic = false;
-				maistai.transform.parent = null;
+				if (transform.GetChild(i).gameObject == maistai)
+				{
+					maistai.GetComponent<Rigidbody>().isKinematic = false;
+					maistai.transform.parent = null;
+				}
 			}
 		}
 	}
