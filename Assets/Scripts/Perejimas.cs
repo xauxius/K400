@@ -12,4 +12,8 @@ public class Perejimas : MonoBehaviour
 	{
 		SceneManager.LoadScene("Kambarys");
 	}
+	public void Menu()
+	{
+		SceneManager.LoadScene("Pradzios ekranas");
+	}
 }
