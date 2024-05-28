@@ -2,22 +2,44 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using System.IO;
+using UnityEditor;
 
 public class FoodOptions : MonoBehaviour
 {
-	public List<GameObject> FoodPrefabs;
+    [SerializeField] private string SpawningPath = "Assets/Spawninimui/FoodOptions";
+	private List<GameObject> FoodPrefabs = new List<GameObject>();
 
     Dictionary<string, GameObject> foodsDict = new Dictionary<string, GameObject>();
 
     void Awake()
     {
+        LoadFoodPrefabs();
+
         foreach (var food in FoodPrefabs)
         {
-            var info = food.GetComponent<Info>();
-            if (info != null)
+            try {
+                var info = food.GetComponent<Info>();
                 foodsDict.Add(info.Pavadinimas, food);
-            else
-                Debug.Log("Nerastas info, kazkas gali but blogai.");
+            } catch (Exception) {
+                Debug.Log($"Maisto {food.name}, nerastas info (greiciausiai).");
+
+            }
+        }
+    }
+
+    void LoadFoodPrefabs()
+    {
+
+        var files = Directory.GetFiles(SpawningPath);
+
+        foreach (var file in files)
+        {
+            if (file.EndsWith(".prefab"))
+            {
+                GameObject food = (GameObject)AssetDatabase.LoadAssetAtPath(file, typeof(GameObject));
+                FoodPrefabs.Add(food);
+            }
         }
     }
 
