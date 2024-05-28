@@ -7,7 +7,7 @@ public class EatablePrefab : EatableBase
 
     private MeshFilter meshFilter;
     private MeshRenderer meshRenderer;
-    private HandsEating handsEating;
+    private GrabableFood handsEating;
 
     public override int GetDisplayCount()
     {
@@ -16,7 +16,7 @@ public class EatablePrefab : EatableBase
 
     public override void StartExtra()
     {
-        handsEating = GetComponent<HandsEating>();
+        handsEating = GetComponent<GrabableFood>();
 
         meshFilter = gameObject.AddComponent<MeshFilter>();
         meshRenderer = gameObject.AddComponent<MeshRenderer>();
