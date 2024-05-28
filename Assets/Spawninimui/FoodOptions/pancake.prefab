@@ -159,10 +159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnOffsets:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0.01, y: 0.1, z: -0.01}
-  - {x: -0.01, y: 0.1, z: 0.01}
-  - {x: 0.01, y: 0.2, z: 0.01}
+  - {x: 0, y: 0.025, z: 0}
+  - {x: -0.05, y: 0.05, z: 0}
 --- !u!114 &-6327665347415795258
 MonoBehaviour:
   m_ObjectHideFlags: 0
