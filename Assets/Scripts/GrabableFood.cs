@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class HandsEating : Grabbing
+public class GrabableFood : Grabbing
 {
 	[SerializeField] private bool debugMode = false;
 	

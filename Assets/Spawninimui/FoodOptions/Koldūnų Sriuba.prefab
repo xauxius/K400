@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1228582358192559081}
   - component: {fileID: 1021559300650704796}
   - component: {fileID: -8432865605365622135}
+  - component: {fileID: -5933154604398875636}
   m_Layer: 0
   m_Name: "Kold\u016Bn\u0173 Sriuba"
   m_TagString: Spoonable
@@ -267,3 +268,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpoonedMaterial: {fileID: 9179218976927012702, guid: d51e6ba1fdc25b741b89ee1ca683edd0, type: 3}
+--- !u!114 &-5933154604398875636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224155753480946419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 867f93dca40fa83428287538225691d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  l_attach: {fileID: 0}
+  r_attach: {fileID: 0}
+  debugMode: 0
