@@ -72,7 +72,7 @@ public abstract class EatableBase : MonoBehaviour
             
         if (++DisplayIndex < GetDisplayCount()) {
             DisplayByIndex(DisplayIndex);
-            if (DisplayIndex == GetDisplayCount() - 1)
+            if (DisplayIndex == GetDisplayCount() - 1 && LeaveLast)
             {
                 enabled = false;
             }

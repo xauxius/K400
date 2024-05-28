@@ -32,5 +32,9 @@ public class GrabableFood : Grabbing
         {
             xrGrab.colliders.Add(collider);
         }
+        if (xrGrab.interactorsSelecting.Count == 0)
+        {
+            RestartInteractable();
+        }
 	}
 }
