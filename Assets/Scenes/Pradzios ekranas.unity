@@ -8659,8 +8659,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FoodPrefabs:
   - {fileID: 9145976129183846092, guid: bd1a202db50ee4048a9cbc5bc9948f59, type: 3}
+  - {fileID: 1552459807984092873, guid: e839f5ac4fcde2840909eb09ae96f63e, type: 3}
   - {fileID: 4487476626177567874, guid: 00f7447fcb7459748a462db559f7fe15, type: 3}
-  - {fileID: 1224155753480946419, guid: 2935e51c38196f34ba6068b1e900ddfb, type: 3}
   - {fileID: 4319354776879004982, guid: 7daf8c48659145f459dfc973d9fd1f4c, type: 3}
   - {fileID: 3504103545010787192, guid: f09a6686b25f2f7418f08bb40da1d844, type: 3}
   - {fileID: 4351461034322427134, guid: 8a5f82f1941896d4ebcda3ce64c52dd1, type: 3}

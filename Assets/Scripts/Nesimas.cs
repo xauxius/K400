@@ -11,7 +11,7 @@ public class Nesimas : MonoBehaviour
 		foreach (GameObject maistai in maistas)
 		{
 			float dist = Vector3.Distance(maistai.transform.position, transform.position);
-			if (dist <= 0.2)
+			if (dist <= 0.2 && transform.position.y < maistai.transform.position.y)
 			{
 				maistai.transform.parent = transform;
 				maistai.GetComponent<Rigidbody>().isKinematic = true;
@@ -22,7 +22,7 @@ public class Nesimas : MonoBehaviour
 		foreach (GameObject maistai in maistas1)
 		{
 			float dist = Vector3.Distance(maistai.transform.position, transform.position);
-			if (dist <= 0.2)
+			if (dist <= 0.2 && transform.position.y < maistai.transform.position.y)
 			{
 				maistai.transform.parent = transform;
 				maistai.GetComponent<Rigidbody>().isKinematic = true;

@@ -2591,9 +2591,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f25fa380e1bc0d3489ea53cbdb32cfe7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 901334888}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f25fa380e1bc0d3489ea53cbdb32cfe7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 901334889}
   m_SourcePrefab: {fileID: 100100000, guid: f25fa380e1bc0d3489ea53cbdb32cfe7, type: 3}
 --- !u!4 &901334887 stripped
 Transform:
@@ -2621,18 +2618,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.1344166, y: 0.70602477, z: 0.7995428}
   m_Center: {x: -0.00000014901161, y: -0.00000022351742, z: 0.3996462}
---- !u!114 &901334889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409490402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8358cfc9fb2065342a65cdc1218b8547, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &929909098
 GameObject:
   m_ObjectHideFlags: 0
@@ -6304,10 +6289,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 840006960}
+        m_TargetAssemblyTypeName: SpoonEating, Assembly-CSharp
+        m_MethodName: activatespoon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 840006960}
+        m_TargetAssemblyTypeName: SpoonEating, Assembly-CSharp
+        m_MethodName: deactivatespoon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []

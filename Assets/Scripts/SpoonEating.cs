@@ -19,6 +19,8 @@ public class SpoonEating : MonoBehaviour
 	float targetTime = 2.0f;
 	bool groja = false;
 
+
+	private bool spooned = false;
 	private void Start()
 	{
 		transform.GetChild(0).gameObject.SetActive(false);
@@ -26,23 +28,26 @@ public class SpoonEating : MonoBehaviour
 
 	void OnCollisionEnter(Collision collision)
     {
-		Spoonable spoonable = collision.gameObject.GetComponent<Spoonable>();
+		if (spooned)
+		{
+			Spoonable spoonable = collision.gameObject.GetComponent<Spoonable>();
 
-        if (spoonable != null)
-        {
-			EatableBase eatable = collision.gameObject.GetComponent<EatableBase>();
-		
-			if (eatable is not null && antsauksto == false && eatable.enabled == true)
-            {
-				transform.GetChild(0).gameObject.SetActive(true);
-				transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material = spoonable.SpoonedMaterial;
-				AudioClip newAudio = eatable.EatingSound;
-				eatingSound = newAudio;
-				antsauksto = true;
+			if (spoonable != null)
+			{
+				EatableBase eatable = collision.gameObject.GetComponent<EatableBase>();
 
-				eatable.Eat();			
+				if (eatable is not null && antsauksto == false && eatable.enabled == true)
+				{
+					transform.GetChild(0).gameObject.SetActive(true);
+					transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material = spoonable.SpoonedMaterial;
+					AudioClip newAudio = eatable.EatingSound;
+					eatingSound = newAudio;
+					antsauksto = true;
+
+					eatable.Eat();
+				}
 			}
-        }
+		}
     }
 
 	void Update()
@@ -83,5 +88,13 @@ public class SpoonEating : MonoBehaviour
 			SoundManager.instance.playEfektus(eatingSound, transform);
 			groja = true;
 		}
+	}
+	public void activatespoon()
+	{
+		spooned = true;
+	}
+	public void deactivatespoon()
+	{
+		spooned = false;
 	}
 }

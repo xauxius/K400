@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LeaveLast: 0
-  EatingSound: {fileID: 0}
+  EatingSound: {fileID: 8300000, guid: 229f8d171e2f5e54b97565e0ea793436, type: 3}
   disableRespawn: 1
   mouth: {fileID: 0}
   shouldPlaySound: 1
